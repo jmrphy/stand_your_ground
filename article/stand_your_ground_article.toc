@@ -1,0 +1,4 @@
+\contentsline {paragraph}{1. There is surprisingly little evidence that ``stand your ground'' laws have much to do with self-defense.}{2}{section*.2}
+\contentsline {paragraph}{2. The ``stand your ground'' defense has \emph {nearly zero} probability of succeeding when the victim is white and the defendant is a person of color.}{2}{section*.3}
+\contentsline {paragraph}{3. Men accused of hurting men are less likely to be convicted than women accused of hurting men.}{2}{section*.4}
+\contentsline {subsubsection}{Technical Appendix on Data, Method, and Previous Research}{3}{section*.5}
