@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  4 NOV 2014 14:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  9 NOV 2014 11:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -734,60 +734,56 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmargin=\skip49
 \droptitle=\skip50
 )
-./stand_your_ground_article.tex:72: Argument of \reserved@a has an extra }.
-<inserted text> 
-                \par 
-l.72 of Southampton}
-                    
-? 
-Runaway argument?
-{\@xfootnote }\def \reserved@b {\stepcounter \@mpfn \protected@xdef \@thefnmark
- \ETC.
-./stand_your_ground_article.tex:72: Paragraph ended before \reserved@a was comp
-lete.
-<to be read again> 
-                   \par 
-l.72 of Southampton}
-                    
-? 
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 137.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2014/04/23 v3.0j Driver-dependant file (DPC,SPQR)
+))
 (/usr/local/texlive/2014/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
 
 LaTeX Warning: Unused global option(s):
-    [book].
+    [article].
 
-No file stand_your_ground_article.aux.
+(./stand_your_ground_article.aux)
 \openout1 = `stand_your_ground_article.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 84.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 83.
+
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 84.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 83.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Info: Redefining \microtypecontext on input line 84.
+LaTeX Info: Redefining \microtypecontext on input line 83.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -810,15 +806,15 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(108.405pt, 397.485pt, 108.405pt)
-* v-part:(T,H,B)=(108.405pt, 578.15999pt, 108.405pt)
+* h-part:(L,W,R)=(90.3375pt, 433.62001pt, 90.3375pt)
+* v-part:(T,H,B)=(90.3375pt, 614.295pt, 90.3375pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=397.485pt
-* \textheight=578.15999pt
-* \oddsidemargin=36.13501pt
-* \evensidemargin=36.13501pt
-* \topmargin=-0.86499pt
+* \textwidth=433.62001pt
+* \textheight=614.295pt
+* \oddsidemargin=18.0675pt
+* \evensidemargin=18.0675pt
+* \topmargin=-18.9325pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
@@ -865,16 +861,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box29
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
-)
-Package color Info: Driver file: pdftex.def on input line 137.
-)
-Package hyperref Info: Link coloring ON on input line 84.
+Package hyperref Info: Link coloring ON on input line 83.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -884,41 +871,43 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count121
 )
-LaTeX Info: Redefining \ref on input line 84.
-LaTeX Info: Redefining \pageref on input line 84.
-LaTeX Info: Redefining \nameref on input line 84.
+LaTeX Info: Redefining \ref on input line 83.
+LaTeX Info: Redefining \pageref on input line 83.
+LaTeX Info: Redefining \nameref on input line 83.
+
+(./stand_your_ground_article.out) (./stand_your_ground_article.out)
 \@outlinefile=\write3
 \openout3 = `stand_your_ground_article.out'.
 
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 86.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 89.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 86.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 89.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 86.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 89.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 86.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 89.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 86.
+(Font)              <10.95> on input line 89.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 86.
+(Font)              <8> on input line 89.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 86.
-LaTeX Font Info:    Try loading font information for U+msa on input line 86.
+(Font)              <6> on input line 89.
+LaTeX Font Info:    Try loading font information for U+msa on input line 89.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -926,7 +915,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2014/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 86.
+LaTeX Font Info:    Try loading font information for U+msb on input line 89.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -934,126 +923,82 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/local/texlive/2014/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 86.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 89.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 89.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 89.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 105.
+ [1
+
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+ [4]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 254.
+
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 86.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 90.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 90.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 90.
-\tf@toc=\write4
-\openout4 = `stand_your_ground_article.toc'.
+) [5]
 
- [1
-
-{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 142.
+LaTeX Warning: Float too large for page by 244.3222pt on input line 401.
 
 
-(/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic settings for font family
-(microtype)             `lmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 144
-.
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/lm/ts1lmtt.fd
-File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic settings for font family
-(microtype)             `lmtt' (encoding: TS1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-Package microtype Info: Character `texttrademark ' is missing
-(microtype)             in font `TS1/lmtt/m/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-
-<stand_your_ground_article_files/figure-latex/unnamed-chunk-2.pdf, id=25, 480.7
+<stand_your_ground_article_files/figure-latex/unnamed-chunk-3.pdf, id=71, 480.7
 9625pt x 317.185pt>
-File: stand_your_ground_article_files/figure-latex/unnamed-chunk-2.pdf Graphic 
+File: stand_your_ground_article_files/figure-latex/unnamed-chunk-3.pdf Graphic 
 file (type pdf)
 
-<use stand_your_ground_article_files/figure-latex/unnamed-chunk-2.pdf>
+<use stand_your_ground_article_files/figure-latex/unnamed-chunk-3.pdf>
 Package pdftex.def Info: stand_your_ground_article_files/figure-latex/unnamed-c
-hunk-2.pdf used on input line 148.
-(pdftex.def)             Requested size: 397.485pt x 262.22774pt.
+hunk-3.pdf used on input line 405.
+(pdftex.def)             Requested size: 433.62001pt x 286.06882pt.
 
-<stand_your_ground_article_files/figure-latex/unnamed-chunk-31.pdf, id=26, 263.
-98625pt x 190.7125pt>
-File: stand_your_ground_article_files/figure-latex/unnamed-chunk-31.pdf Graphic
- file (type pdf)
+<stand_your_ground_article_files/figure-latex/unnamed-chunk-4.pdf, id=72, 336.2
+5626pt x 262.9825pt>
+File: stand_your_ground_article_files/figure-latex/unnamed-chunk-4.pdf Graphic 
+file (type pdf)
 
-<use stand_your_ground_article_files/figure-latex/unnamed-chunk-31.pdf>
+<use stand_your_ground_article_files/figure-latex/unnamed-chunk-4.pdf>
 Package pdftex.def Info: stand_your_ground_article_files/figure-latex/unnamed-c
-hunk-31.pdf used on input line 164.
-(pdftex.def)             Requested size: 263.9856pt x 190.72365pt.
+hunk-4.pdf used on input line 412.
+(pdftex.def)             Requested size: 336.25543pt x 262.98584pt.
 
-<stand_your_ground_article_files/figure-latex/unnamed-chunk-32.pdf, id=27, 263.
-98625pt x 190.7125pt>
-File: stand_your_ground_article_files/figure-latex/unnamed-chunk-32.pdf Graphic
- file (type pdf)
+<stand_your_ground_article_files/figure-latex/unnamed-chunk-5.pdf, id=73, 336.2
+5626pt x 262.9825pt>
+File: stand_your_ground_article_files/figure-latex/unnamed-chunk-5.pdf Graphic 
+file (type pdf)
 
-<use stand_your_ground_article_files/figure-latex/unnamed-chunk-32.pdf>
+<use stand_your_ground_article_files/figure-latex/unnamed-chunk-5.pdf>
 Package pdftex.def Info: stand_your_ground_article_files/figure-latex/unnamed-c
-hunk-32.pdf used on input line 165.
-(pdftex.def)             Requested size: 263.9856pt x 190.72365pt.
-
-Overfull \hbox (133.09726pt too wide) in paragraph at lines 164--166
-[][] [] 
- []
-
-[2] [3 <./stand_your_ground_article_files/figure-latex/unnamed-chunk-2.pdf> <./
-stand_your_ground_article_files/figure-latex/unnamed-chunk-31.pdf> <./stand_you
-r_ground_article_files/figure-latex/unnamed-chunk-32.pdf>]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 213.
- [4] [5] [6] [7]
-[8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1000.
- [21]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1000.
+hunk-5.pdf used on input line 418.
+(pdftex.def)             Requested size: 336.25543pt x 262.98584pt.
+ [6 <./stand_your_ground_article_files/figure-latex/unnamed-chunk-3.pdf>] [7] [
+8 <./stand_your_ground_article_files/figure-latex/unnamed-chunk-4.pdf> <./stand
+_your_ground_article_files/figure-latex/unnamed-chunk-5.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 457.
+ [9]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 457.
 
 (./stand_your_ground_article.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1000.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1000.
-
-
-
-Package rerunfilecheck Warning: File `stand_your_ground_article.out' has change
-d.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `stand_your_ground_article.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1000.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 457.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 457.
+Package rerunfilecheck Info: File `stand_your_ground_article.out' has not chang
+ed.
+(rerunfilecheck)             Checksum: 5A7FFAB5E77E0E0C2924312A95318C4F;536.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 457.
  ) 
 Here is how much of TeX's memory you used:
- 12444 strings out of 493117
- 181949 string characters out of 6135433
- 278931 words of memory out of 5000000
- 15574 multiletter control sequences out of 15000+600000
- 89708 words of font info for 131 fonts, out of 8000000 for 9000
+ 12561 strings out of 493117
+ 183483 string characters out of 6135433
+ 290857 words of memory out of 5000000
+ 15691 multiletter control sequences out of 15000+600000
+ 78880 words of font info for 127 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,8n,35p,706b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exi
+ 35i,10n,35p,1747b,383s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exi
 st, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
-, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
 , replaced by a fixed one
@@ -1067,21 +1012,24 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
 
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/t
-exlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2014/te
-xmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2014/texmf-dist/f
-onts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
-/public/lm/lmbxi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/l
-m/lmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmr12.pfb
-></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/loca
-l/texlive/2014/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/20
-14/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2014/texmf-dis
-t/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
-pe1/public/lm/lmtt12.pfb>
-Output written on stand_your_ground_article.pdf (21 pages, 273216 bytes).
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/loca
+l/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/
+2014/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2014/texmf-dis
+t/fonts/enc/dvips/lm/lm-ts1.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1
+/public/lm/lmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm
+/lmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmmi10.pf
+b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/loc
+al/texlive/2014/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2014/texmf-
+dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
+ype1/public/lm/lmr8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/
+lm/lmri10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmri12.
+pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy7.pfb>
+Output written on stand_your_ground_article.pdf (9 pages, 262804 bytes).
 PDF statistics:
- 209 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
- 29200 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 174 PDF objects out of 1000 (max. 8388607)
+ 140 compressed objects within 2 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 25648 words of extra memory for PDF output out of 29859 (max. 10000000)
 

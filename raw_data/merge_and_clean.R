@@ -92,9 +92,21 @@ syg$victim_name_count<-sapply(strsplit(as.character(syg$victims), " "), function
 syg$accused_name_count<-sapply(strsplit(as.character(syg$accused), " "), function(x) length(x))
 
 
+syg$type<-syg$what_happenedclick_for_details_link._text
+syg$type<-factor(recode(syg$type, 
+                         "Domestic" <- "Domestic argument",
+                         "Domestic" <- "domestic dispute",
+                         "Domestic" <- "Domestic dispute",
+                         "Domestic" <- "Roommate dispute",
+                          NA <- "Unknown",
+                             otherwise="Non-domestic"))
+syg$type<-factor(df$type, levels=c("Non-domestic", "Domestic"))
+
 
 # Make a subset of select variables
-syg<-subset(syg, select=c("casenumber", "year", "city", "county", "accused", "accused_name_count", "victims", "victim_name_count", "event_type",  "deaths", "outcome", "circumstances"))
+syg<-subset(syg, select=c("casenumber", "year", "city", "county", "accused", "accused_name_count", "victims",
+                          "victim_name_count", "deaths", "outcome", "circumstances",
+                          "type"))
 
 # Merge
 df<-merge(import, syg, by=c("casenumber"))
@@ -110,6 +122,7 @@ df$conviction<-factor(recode(df$outcome,
                                 "Conviction" <- "plea",
                                 otherwise=NA))
 df$conviction<-factor(df$conviction, levels=c("No Conviction", "Conviction"))
+
 
 # Matches victim_intiated perfectly
 # df$initiation<-factor(recode(df$initiator,
@@ -137,7 +150,7 @@ write.csv(df, file="cleaned_data/florida_syg_master_data.csv")
 
 
 convict.vars<-subset(df, victim_name_count<4, select=c("accused", "victims",
-                                                       "conviction", "county", "year",
+                                                       "conviction", "county", "year", "type",
                                                        "witness", "victim_age", "accused_age",
                                                        "deaths", "accused_weapon", "victim_unarmed",
                                                        "victim_crime", "defendant_pursued",
