@@ -50,11 +50,11 @@
 \hypersetup{breaklinks=true,
             bookmarks=true,
             pdfauthor={},
-            pdftitle={A Statistical Analysis of Racial and Gender Bias in Stand Your Ground Cases in Florida, 2006-2013},
+            pdftitle={A Statistical Analysis of Racism and Sexism in Stand Your Ground Cases in Florida, 2006-2013},
             colorlinks=true,
-            citecolor=RoyalBlue,
-            urlcolor=RoyalBlue,
-            linkcolor=RoyalBlue,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=blue,
             pdfborder={0 0 0}}
 \urlstyle{same}  % don't use monospace font for urls
 \setlength{\parindent}{0pt}
@@ -65,8 +65,8 @@
 %%% Change title format to be more compact
 \usepackage{titling}
 \setlength{\droptitle}{-2em}
-  \title{A Statistical Analysis of Racial and Gender Bias in ``Stand Your
-Ground'' Cases in Florida, 2006-2013}
+  \title{A Statistical Analysis of Racism and Sexism in ``Stand Your Ground''
+Cases in Florida, 2006-2013}
   \pretitle{\vspace{\droptitle}\centering\huge}
   \posttitle{\par}
   \author{Justin Murphy\\University of Southampton}
@@ -74,10 +74,9 @@ Ground'' Cases in Florida, 2006-2013}
   \postauthor{\par}
   \predate{\centering\large\emph}
   \postdate{\par}
-  \date{26 November 2014}
+  \date{05 February 2015}
 
 
-\usepackage[usenames,dvipsnames]{color}
 \usepackage{dcolumn}
 \usepackage{setspace}
 
@@ -88,7 +87,7 @@ Ground'' Cases in Florida, 2006-2013}
 
 
 \begin{abstract}
-In the U.S., ``stand your ground" laws have been adopted by most states with the supposed intention of empowering self-defense, yet critics argue these laws re-enforce white supremacy in the public sphere and male supremacy in the home. This research note presents the first statistical test for racial and gender bias in the enforcement of ``stand your ground" laws which also controls for a wide variety of other factors frequently cited to justify observed outcomes. I find evidence of racial and gender bias in ``stand your ground" cases in Florida from 2006-2013. The probability of conviction for a white defendant against a white victim is found to be fairly high at around 90\% but with a large margin of error while the probability of conviction for a black defendant is nearly 100\% with a very small margin of error. The probability of conviction for a male defendant in a typical domestic case was found to be about 40\%, but for a female defendant in an otherwise objectively equivalent case the probability of conviction increases dramatically to 80\%. This research has important implications for legal scholars, lawmakers, judges, and activists because it provides new evidence that in practice ``stand your ground" laws may contribute to the legal institutionalization of racism and sexism. In particular, statistical simulations suggest the probability George Zimmerman was going to be found guilty of murdering unarmed black teenager Trayvon Martin in 2012 was marginally greater than 50\% but would have been about 98\% if Trayvon Martin had been white. On the other hand, black female Marissa Alexander who fired a physically innocuous warning shot to deter her husband in 2010 faced a probability of conviction marginally greater than 50\%, but the probability of conviction for a male defendant in an otherwise objectively equivalent situation would have been a mere 12\%. Thus the findings are especially important for currently-open and future cases such as Marissa Alexander's in which sexism or racism could independently lead to incorrect convictions. \footnote{Justin Murphy (\url{jmrphy.net}, \href{http://twitter.com/jmrphy}{@jmrphy}) is Assistant Professor of Politics at University of Southampton, UK. This is the first release of a working paper and has not been peer-reviewed; please send questions and comments to \href{mailto:j.murphy@soton.ac.uk}{j.murphy@soton.ac.uk}.}
+In the United States, ``stand your ground" (SYG) laws have been adopted by most states with the supposed intention of empowering self-defense, yet critics argue these laws reinforce white supremacy in the public sphere and male supremacy in the home. This research note presents the first statistical tests for racial and gender bias in the enforcement of SYG laws to control for a wide variety of other factors frequently cited to justify observed outcomes. Considering a sample of SYG cases in Florida from 2006-2013, I find the probability of conviction for a white defendant against a white victim in a typical case is fairly high at around 90\% but with a large margin of error, whereas the probability of conviction for a black defendant against a white victim approaches 100\%, even after controlling for more than 10 different objective factors related to the circumstances of the incident. The probability of conviction for a male defendant in a typical domestic case is found to be about 40\%, but for a female defendant in an otherwise objectively equivalent case the probability of conviction increases dramatically to 80\%. I estimate that the probability George Zimmerman was going to be found guilty of murdering unarmed black teenager Trayvon Martin in 2012 was marginally greater than 50\% but would have been about 98\% if Trayvon Martin had been white. On the other hand, black female Marissa Alexander who fired a physically innocuous warning shot to deter her husband in 2010 faced a probability of conviction marginally greater than 50\%, but the probability of conviction for a male defendant in an otherwise objectively equivalent situation would have been around only 12\%. Finally, I show that these results are not due to outliers or non-random assignment. This research has important implications for scholars, lawmakers, judges, and activists because it provides new and improved evidence that SYG laws contribute to the legal institutionalization of racism and sexism.\footnote{Justin Murphy (\url{jmrphy.net}, \href{http://twitter.com/jmrphy}{@jmrphy}) is Assistant Professor of Politics at University of Southampton, UK. This is the first release of a working paper and has not been peer-reviewed; please send questions and comments to \href{mailto:j.murphy@soton.ac.uk}{j.murphy@soton.ac.uk}.}
 \end{abstract}
 \onehalfspacing
 
@@ -106,30 +105,44 @@ survivors of domestic violence in particular (Flatow 2014).
 
 This article presents the first systematic statistical analysis of
 racial and gender bias in the outcome of SYG cases to control for a wide
-variety of contextual factors. The data is gathered from the Tampa Bay
-Times website, which reports a wealth of information on 237 cases from
-the state of Florida in which an SYG defense was claimed.\footnote{See
-  the section below on Data and Method for details.} Additionally, I
-have made available all of the code and data which are necessary to
-reproduce the analyses of this article.\footnote{All the data and code
-  required to reproduce this article are available in the code
-  repository at \href{http://j.mp/syg_repository}{j.mp/syg\_repository}.
-  In particular, all of the code for processing the raw Tampa Bay Times
-  data I scraped from the web is at
+variety of contextual factors. The data is gathered from the \emph{Tampa
+Bay Times} website, which reports information on 237 cases from the
+state of Florida in which an SYG defense was claimed.\footnote{See the
+  section below on Data and Method for details.} Additionally, I have
+made available all of the code and data which are necessary to reproduce
+the analyses of this article.\footnote{All the data and code required to
+  reproduce this article are available in the code repository at
+  \href{http://j.mp/syg_repository}{j.mp/syg\_repository}. In
+  particular, all of the code for processing the raw \emph{Tampa Bay
+  Times} data I scraped from the web is at
   \href{http://j.mp/clean_syg}{j.mp/clean\_syg}; the full, final
   spreadsheet of all variables for all 237 cases made available by the
-  Tampa Bay Times is at \href{http://j.mp/syg_data}{j.mp/syg\_data}; the
-  subset of cases used in the analyses below can be found at
+  \emph{Tampa Bay Times} is at
+  \href{http://j.mp/syg_data}{j.mp/syg\_data}; the subset of cases used
+  in the analyses below can be found at
   \href{http://j.mp/model_data}{j.mp/model\_data}; and the source
   materials for reproducing this article in particular can be found at
   \href{http://j.mp/syg_analysis}{j.mp/syg\_analysis}.}
 
-Two results from the analysis are notable. First, the SYG defense has
+Two results from the analysis are notable. First, an SYG defense has
 \emph{nearly zero} probability of succeeding when the victim is white
 and the defendant is a person of color. This finding remains true after
 accounting for more than ten objective factors related to the crime,
 suggesting that the racial disparity is not due to any commonly
-suspected objective factor correlated with race.
+suspected objective factor correlated with race. Second, when attention
+is focused on domestic cases in particular, an SYG defense has a
+drastically lower likelihood of succeeding for female defendants
+relative to male defendants.
+
+The article proceeds in five sections. The first section provides
+background on the controversy surrounding SYG laws and highlights the
+main findings of previous research, focusing on previous statistical
+analyses. The second section provides a detailed description of the data
+and modeling strategy used in this article. The subsequent section
+presents the main statistical findings, including two simulation
+exercises designed to shed light on two recent, high-visibility cases.
+The penultimate section assesses the robustness of the main findings and
+a final section concludes.
 
 \subsection{Background and Literature
 Review}\label{background-and-literature-review}
@@ -148,47 +161,50 @@ legal process, from the initial police response to the wording of jury
 instructions (Coates 2013). On the other hand, Marissa Alexander (a
 31-year-old black woman) was convicted of aggravated assault with a
 deadly weapon for shooting one warning shot to defend herself against
-her abusive husband, despite her claims to self-defense under the same
-SYG laws which assisted George Zimmerman toward his acquittal.
+her husband, despite her claims to self-defense under the same SYG laws
+which assisted George Zimmerman toward his acquittal.\footnote{Marissa
+  Alexander originally appealed this verdict before ultimately accepting
+  a plea deal.}
 
-The Tampa Bay Times has organized a wealth of information regarding all
+The \emph{Tampa Bay Times} has organized several key facts regarding all
 the cases they could find in which someone from the state of Florida has
-claimed a ``stand your ground'' defense since 2006 (``Florida's Stand
-Your Ground Law'' 2013). The Tampa Bay Times produced several analyses
-of their data, however, their analyses only look at descriptive
-cross-sections of the data. They explore the data revealing, but because
-they do not control for other possible explanations their analyses
-remain vulnerable to common conservative retorts. In particular, it is
-commonly argued that bias in outcomes may be due to objective
-differences which are merely correlated with race, and that people of
-color are more likely to be convicted simply because they are more
-likely to engage in violent gun crime (Lott 2013). As the Tampa Bay
-Times must concede, ``The Times analysis does not prove that race caused
-the disparity between cases with black and white victims. Other factors
-may be at play (Martin, Hundley, and Humburg 2012).''
+claimed an SYG defense since 2006 (``Florida's Stand Your Ground Law''
+2013). The \emph{Tampa Bay Times} produced several analyses of their
+data, however, their analyses only look at descriptive cross-sections of
+the data. They explore the data revealingly, but because they do not
+control for other possible explanations their analyses remain vulnerable
+to many common, conservative retorts. In particular, it is commonly
+argued that bias in outcomes may be due to objective differences which
+are merely correlated with race, and that people of color are more
+likely to be convicted simply because they are more likely to engage in
+violent gun crime (Lott 2013). As the \emph{Tampa Bay Times} must
+concede, ``The \emph{Times} analysis does not prove that race caused the
+disparity between cases with black and white victims. Other factors may
+be at play (Martin, Hundley, and Humburg 2012).''
 
-The only previous statistical test of bias in the enforcement of ``stand
-your ground'' laws which sought to control for alternative explanations
-at the individual level was an analysis by gun advocate John Lott
-submitted in testimony to the US Senate Judiciary Committee (Lott 2013).
-Using the data collected by the Tampa Bay Times, Lott conducts two
-logistic regression analyses on the probability a defendant will be
-convicted when SYG is argued. On the basis of these two regression
-analyses, Lott submits that there is no evidence of racial bias in SYG
-cases. However, Lott's statistical analysis is problematic in several
-important ways. The first problem is that the analysis does not provide
-any discussion of how the Tampa Bay Times data were pre-processed for
-analysis. As will become clear in the section below on Data and Method,
-organizing the Tampa Bay Times data for statistical analysis requires
-the analyst to make several non-trivial and non-obvious decisions.
-However, the analysis submitted in the US Senate testimony provides no
-such discussion. As only one example, the Tampa Bay Times provides
+The only previous statistical test of bias in the enforcement of SYG
+laws which sought to control for alternative explanations at the
+individual level was an analysis by gun advocate John Lott submitted in
+testimony to the US Senate Judiciary Committee (Lott 2013). Using the
+data collected by the \emph{Tampa Bay Times}, Lott conducts two logistic
+regression analyses on the probability a defendant will be convicted
+when SYG is argued. On the basis of these two regression analyses, Lott
+submits that there is no evidence of racial bias in SYG cases. However,
+Lott's statistical analysis is problematic in several important ways.
+
+The first problem is that the analysis does not provide any discussion
+of how the \emph{Tampa Bay Times} data were pre-processed for analysis.
+As will become clear in the section below on Data and Method, organizing
+the \emph{Tampa Bay Times} data for statistical analysis requires the
+analyst to make several non-trivial and non-obvious decisions. However,
+the analysis submitted in the US Senate testimony provides no such
+discussion. As only one example, the \emph{Tampa Bay Times} provides
 several categories for the legal outcome of cases, including
 ``conviction'' but also ``plea'', ``acquittal'', ``immunity'', etc. The
 distinction between what should be counted as ``conviction'' and ``not
 conviction'' is far from obvious and, as with all statistical analysis,
 requires reasoned argument and transparency from the analyst. Yet, Lott
-provides no discussion. Second, his models only include as many as 78 of
+provides no discussion.Second, his models only include as many as 78 of
 the total 237 cases. Because there is no discussion of the data cleaing
 process, it is unclear why the analysis is conducted on less than one
 third of the total cases, but it leaves open the significant question of
@@ -204,7 +220,7 @@ effectively means that some of the predictors in the model are
 interpreting error (noise) as a systematic association with predictors
 (signal). For this reason, overfit models are known to have poor
 predictive performance. Fourth, he does not include several variables
-recorded by the Tampa Bay Times which are plausible predictors of
+recorded by the \emph{Tampa Bay Times} which are plausible predictors of
 outcomes, such as gender and age of victims and defendants, the county
 in which the incident occurred, weapon used by defendant, or whether the
 victim died.
@@ -213,9 +229,9 @@ Most published academic studies of SYG laws have focused on the effect
 of SYG laws on homicide rates rather than possible racism in
 enforcement. For instance, Cheng and Hoekstra (2013) find that SYG laws
 fail to deter burglary, robbery, or assault but increase murder rates by
-about 8 percent on net. McClellan and Tekin (McCellan and Tekin 2012)
-also find that SYG laws lead to an increase of homicides but that the
-victims are disproprtionately white males.
+about 8 percent on net. McClellan and Tekin (2012) also find that SYG
+laws lead to an increase of homicides but that the victims are
+disproprtionately white males.
 
 The only previous study which focuses on the effect of SYG laws on
 racial disparities in legal outcomes is one by Roman (2013), which uses
@@ -223,10 +239,10 @@ data from the Federal Bureau of Investigations Supplementary Homicide
 Report to model the ruling of justified homicides. Roman reports robust
 evidence of racial bias, finding that, compared to white-on-white
 homicides, black-on-white homicides have about half the odds of being
-ruled justified and that this disparity is worse in states with SYG
-laws.(Roman 2013, 9) While Roman's findings appear robust, that study
-has two key limitations. The first is that the effect of SYG laws is
-only considered at the state level as a factor which shapes individual
+ruled justified and that this disparity is worse in states with SYG laws
+(Roman 2013, 9). While Roman's findings appear robust, that study has
+two key limitations. The first is that the effect of SYG laws is only
+considered at the state level as a factor which shapes individual
 rulings of justifiable homicide. For this reason the analysis does not
 give us direct insight into the subset of cases which specifically
 involve SYG claims. The second shortcoming is that Roman is unable to
@@ -236,27 +252,28 @@ acknowledges--\emph{if} white-on-black homicides are more likely to be
 legitimate cases of self-defense than black-on-white homicides, then
 racial disparity in rulings of justifiable homicide may not reflect
 racism but rather objective differences in crime rates across racial
-groups. Because the Tampa Bay Times data contains information on
+groups. Because the \emph{Tampa Bay Times} data contains information on
 precisely such contextual factors, the present study allows us to
 control for several of the non-racial reasons for this racial disparity.
 
 \subsection{Data and Methodoloy}\label{data-and-methodoloy}
 
-To test for the possibility of racial bias in SYG cases, I gathered all
-the available data made available on the Tampa Bay Times website
-(``Florida's Stand Your Ground Law'' 2013).\footnote{I began by
-  downloading a spreadsheet made available on the Tampa Bay Times
-  website, which included only a small subset of the relevant variables
-  included elsewhere on their website. To supplement this spreadsheet
-  with the other factors available only through the separate webpages
-  for each individual case, I used \href{http://import.io}{Import.IO} to
-  crawl and scrape the webpage of each case automatically. I then
-  merged, cleaned, and pre-processed the spreadsheet made available by
-  the Times and the spreasheet of scraped information. See also Footnote
-  3.} The final result was a data matrix of 175. The data matrix
-contains indicators for all the following factors related to each case,
-with the names I assigned each variable in parentheses.\footnote{The
-  specific data matrix used for the regression models can be found at
+To test for the possibility of racial and gender bias in SYG cases, I
+gathered all the available data made available on the \emph{Tampa Bay
+Times} website (``Florida's Stand Your Ground Law'' 2013).\footnote{I
+  began by downloading a spreadsheet made available on the \emph{Tampa
+  Bay Times} website, which included only a small subset of the relevant
+  variables included elsewhere on their website. To supplement this
+  spreadsheet with the other factors available only through the separate
+  webpages for each individual case, I used
+  \href{http://import.io}{Import.IO} to crawl and scrape the webpage of
+  each case automatically. I then merged, cleaned, and pre-processed the
+  spreadsheet made available by the Times and the spreasheet of scraped
+  information. See also Footnote 3.} The final result was a data matrix
+of 175. The data matrix contains indicators for all the following
+factors related to each case, with the names I assigned each variable in
+parentheses.\footnote{The specific data matrix used for the regression
+  models can be found at
   \href{http://j.mp/model_data}{\url{http://j.mp/model_data}}. See also
   Footnote 3.}
 
@@ -298,7 +315,7 @@ with the names I assigned each variable in parentheses.\footnote{The
     to different results.}
 \item
   Were the victim and defendant female or male? (Victim Male, Defendant
-  Male)\footnote{Transgender identities were not gauged}
+  Male)\footnote{Transgender identities were not gauged.}
 \item
   Was the incident a domestic dispute? (Domestic)
 \item
@@ -326,28 +343,37 @@ granted immunity, or not charged.\footnote{The inclusion of plea deals
 
 Many variables included different categories to indicate uncertainty,
 such as ``disputed'', ``unknown'', or ``unclear.'' In these cases, I
-adopted a principle of giving ``benefit of the doubt'' to the
-individual, counting any uncertainty noted by the Tampa Bay Times as not
-applying to the individual (whether victim or defendant). For instance,
-the variable \emph{Witness} is coded such that, if there is not
-\emph{clearly} at least one witness confirmed by the Tampa Bay Times,
-then it takes a value of ``No clear witness(es)'' and otherwise takes a
-value of ``Clear witness(es).'' Likewise, the variable \emph{Victim
-Crime} takes a value of ``Victim was committing a crime'' in unambiguous
-cases but a value of ``Victim was not clearly committing a crime''
-whenever the Times noted uncertainty.
+adopted a principle of giving benefit of the doubt to the individual in
+question, counting any uncertainty noted by the \emph{Tampa Bay Times}
+as not applying to the individual (whether victim or defendant). For
+instance, the variable \emph{Witness} is coded such that, if there is
+not \emph{clearly} at least one witness confirmed by the \emph{Tampa Bay
+Times}, then it takes a value of ``No clear witness(es)'' and otherwise
+takes a value of ``Clear witness(es).'' Likewise, the variable
+\emph{Victim Crime} takes a value of ``Victim was committing a crime''
+in unambiguous cases but a value of ``Victim was not clearly committing
+a crime'' whenever the Times noted uncertainty.
 
-After scraping, cleaning, and merging the data from the Tampa Bay Times
-website, I conducted a series of logistic regression analyses modeling
-the odds of conviction as a function of the independent variables listed
-above. Logistic regression analysis allows one to estimate the
-relationship between multiple independent variables on some dichotomous
-outcome.
+After scraping, cleaning, and merging the data from the \emph{Tampa Bay
+Times} website, I conducted a series of logistic regression analyses
+modeling the odds of conviction as a function of the independent
+variables listed above. Logistic regression analysis allows one to
+estimate the relationship between multiple independent variables on some
+dichotomous outcome.
 
-If perceived racial or gender bias is simply due to the fact that one
-racial group or gender commits more or worse crimes, or because one
-racial group or gender more often has to defend itself from certain
-types of crimes, then the coefficients related to race and gender should
+Following in the spirit of ``intersectional'' perspectives on race and
+gender in critical legal research (Crenshaw 1991; Crenshaw 1989)), I
+also consider the four possible interactions among the race and gender
+of defendants and victims (White Victim X White Defendant, Male Victim X
+Male Defendant, White Victim X Male Victim, White Defendant X Male
+Defendant). I then consider whether domestic cases may have different
+effects for male and female defendants (Domestic X Male Defendant), or
+for male and female victims (Domestic X Male Victim).
+
+If previously perceived racial or gender bias is simply due to the fact
+that one racial group or gender commits more or worse crimes, or because
+one racial group or gender more often has to defend itself from certain
+types of crimes, then the coefficients related to race or gender should
 be statistically indistinguishable from zero while objective factors
 related to the incident should be statistically significant predictors
 of conviction (e.g., if the victim initiated the incident and was armed,
@@ -369,7 +395,7 @@ statistical uncertainty of the coefficients. Starred coefficients are
 those which are very unlikely to be observed merely by chance, according
 to conventional cutoffs. For instance, the coefficient for \emph{Victim
 Initiated} in Model 1 suggests that, on average, a situation which the
-victim initiates has a log-odds of conviction 3.18 less than if the
+victim initiates has a log-odds of conviction 3.2 less than if the
 victim did not clearly initiate, assuming all the other independent
 variables are equal to their modal values. Because log-odds are not
 conveniently interpretable in terms of substantive effects, I postpone
@@ -420,15 +446,15 @@ defendants.\footnote{The statistically significant coefficient of 9.90
   conviction for when the victim is white compared to when the victim is
   a person of color, \emph{while} the defendant is a person of color.
   The negative and significant coefficient for \emph{White Victim X
-  White Defendant} suggests that the coefficient of 9.90 associated with
-  a white victim decreases by an average of 4.24 for white defendants.
+  White Defendant} suggests that the coefficient of 9.9 associated with
+  a white victim decreases by an average of 4.2 for white defendants.
   See below for more conveniently interpretable effect sizes.)} Model 2
 also suggests that the extra likelihood of conviction in cases of white
 victims is significantly greater for female relative to male
 victims.\footnote{The negative and significant coefficient for
-  \emph{White Victim X Male Victim} suggests that the coefficient of
-  9.90 associated with a white victim decreases by an average of 6.05
-  for male victims relative to female victims.)}
+  \emph{White Victim X Male Victim} suggests that the coefficient of 9.9
+  associated with a white victim decreases by an average of 6.0 for male
+  victims relative to female victims.)}
 
 The coefficients for \emph{Domestic} in Models 1 and 2 suggest that in
 general, domestic disputes which involve SYG claims are less likely to
@@ -447,6 +473,32 @@ when the defendant is female. The gender of the victim, however, has no
 discernable conditioning effect on the relationship between domesticity
 and conviction.
 
+Before assessing the size of these estimated effects, it should be noted
+that in addition to the interaction of race across defendant and victim,
+and the interaction of domesticity and gender, it has been argued that
+race and gender interact in complicated ways specifically within cases
+of domestic violence. Crenshaw highlights in particular that women of
+color relative to white women may be less likely to challenge domestic
+abuse through the legal system because the home may be seen as a ``safe
+haven'' with respect to racism in society, and/or to avoid negative
+stereotypes about black communities (Crenshaw 1991, 1257; Crenshaw 1989,
+71). Unfortunately, separate analyses attempting to explore this
+additional layer of complexity were found to be uninformative due to the
+limited size of the present sample.\footnote{Specifically, following in
+  the spirit of Crenshaw's arguments, I considered four variations of
+  Model 3, focusing on the domesticity-gender interaction for cases of
+  white victims only and for cases of non-white victims only. With only
+  68 cases of non-white victims, full models similar to those reported
+  in Table 1 lead to overfitting. Removing some independent variables
+  could avoid overfitting but is typically a bad strategy because it
+  increases the risk of omitted variable bias and introduces
+  arbitrariness. In the absence of expert, \emph{a priori} knowledge
+  regarding the true data generating process, I judged it not worthwhile
+  to examine these additional layers of complexity given the present
+  data.} However, future research using additional or different data, or
+alternative modeling strategies may very well generate valuable insights
+which further refine the general findings presented here.
+
 \pagebreak
 
 \begin{table}[!htbp] \centering 
@@ -457,39 +509,39 @@ and conviction.
 \\[-1.8ex]\hline \\[-1.8ex] 
 \\[-1.8ex] & \multicolumn{1}{c}{\textbf{Model 1}} & \multicolumn{1}{c}{\textbf{Model 2}} & \multicolumn{1}{c}{\textbf{Model 3}}\\ 
 \hline \\[-1.8ex] 
- Victim Initiated & -3.20^{***} & -3.30^{***} & -3.50^{***} \\ 
+ Victim Initiated & -3.20^{***} & -3.30^{***} & -3.60^{***} \\ 
   & (0.79) & (0.85) & (0.86) \\ 
-  Victim Crime & -0.44 & -1.20 & -0.18 \\ 
+  Victim Crime & -0.44 & -1.20 & -0.14 \\ 
   & (0.98) & (1.10) & (1.00) \\ 
-  Victim Unarmed & 0.83 & 1.50^{*} & 0.72 \\ 
+  Victim Unarmed & 0.83 & 1.50^{*} & 0.70 \\ 
   & (0.64) & (0.77) & (0.66) \\ 
-  Defendant Pursued & -0.29 & -0.33 & -0.45 \\ 
-  & (0.67) & (0.72) & (0.72) \\ 
-  Defendant Could Retreat & 1.70^{**} & 2.00^{***} & 2.00^{***} \\ 
-  & (0.69) & (0.74) & (0.74) \\ 
-  Defendant Gun & -1.80^{***} & -1.90^{***} & -2.00^{***} \\ 
+  Defendant Pursued & -0.29 & -0.33 & -0.50 \\ 
+  & (0.67) & (0.72) & (0.71) \\ 
+  Defendant Could Retreat & 1.70^{**} & 2.00^{***} & 1.90^{***} \\ 
+  & (0.69) & (0.74) & (0.73) \\ 
+  Defendant Gun & -1.80^{***} & -1.90^{***} & -2.10^{***} \\ 
   & (0.68) & (0.74) & (0.75) \\ 
   Deaths & 2.60^{***} & 2.70^{***} & 2.90^{***} \\ 
   & (0.71) & (0.79) & (0.77) \\ 
-  Witness & -0.32 & -0.12 & -0.21 \\ 
-  & (0.63) & (0.71) & (0.68) \\ 
-  Physical Evidence & -0.95 & -0.96 & -0.91 \\ 
-  & (0.60) & (0.63) & (0.62) \\ 
-  Defendant's Property & -0.13 & 0.36 & -0.14 \\ 
-  & (0.71) & (0.81) & (0.77) \\ 
-  Domestic & -1.70^{*} & -2.40^{**} & 3.60 \\ 
+  Witness & -0.32 & -0.12 & -0.20 \\ 
+  & (0.63) & (0.71) & (0.67) \\ 
+  Physical Evidence & -0.95 & -0.96 & -0.96 \\ 
+  & (0.60) & (0.63) & (0.61) \\ 
+  Defendant's Property & -0.13 & 0.36 & -0.25 \\ 
+  & (0.71) & (0.81) & (0.74) \\ 
+  Domestic & -1.70^{*} & -2.40^{**} & 3.90 \\ 
   & (0.88) & (1.00) & (3.00) \\ 
   Victim White & 2.10^{***} & 9.90^{**} & 1.80^{**} \\ 
-  & (0.77) & (3.90) & (0.77) \\ 
-  Victim Male & -1.40 & 4.50 & -1.70 \\ 
-  & (1.30) & (3.80) & (2.10) \\ 
-  Victim Age & 0.02 & 0.04 & 0.03 \\ 
-  & (0.02) & (0.03) & (0.03) \\ 
-  Defendant White & -1.90^{**} & -0.13 & -2.70 \\ 
-  & (0.78) & (1.90) & (1.70) \\ 
-  Defendant Male & 0.17 & 5.50 & 1.10 \\ 
-  & (0.94) & (4.10) & (1.70) \\ 
-  Defendant Age & 0.001 & -0.01 & -0.0002 \\ 
+  & (0.77) & (3.90) & (0.78) \\ 
+  Victim Male & -1.40 & 4.50 & -1.40 \\ 
+  & (1.30) & (3.80) & (2.00) \\ 
+  Victim Age & 0.02 & 0.04 & 0.02 \\ 
+  & (0.02) & (0.03) & (0.02) \\ 
+  Defendant White & -1.90^{**} & -0.13 & -1.90^{**} \\ 
+  & (0.78) & (1.90) & (0.81) \\ 
+  Defendant Male & 0.17 & 5.50 & 1.60 \\ 
+  & (0.94) & (4.10) & (1.40) \\ 
+  Defendant Age & 0.001 & -0.01 & 0.002 \\ 
   & (0.02) & (0.02) & (0.02) \\ 
   White Victim X White Defendant &  & -4.20^{**} &  \\ 
   &  & (1.80) &  \\ 
@@ -497,15 +549,15 @@ and conviction.
   &  & (4.00) &  \\ 
   White Victim X Male Victim &  & -6.00^{*} &  \\ 
   &  & (3.50) &  \\ 
-  White Defendant X Male Defendant &  & 0.53 & 0.86 \\ 
-  &  & (1.80) & (1.70) \\ 
+  White Defendant X Male Defendant &  & 0.53 &  \\ 
+  &  & (1.80) &  \\ 
   Domestic X Male Defendant &  &  & -4.30^{**} \\ 
   &  &  & (2.10) \\ 
-  Domestic X Male Victim &  &  & -2.30 \\ 
-  &  &  & (3.00) \\ 
+  Domestic X Male Victim &  &  & -2.60 \\ 
+  &  &  & (2.90) \\ 
  N & \multicolumn{1}{c}{175} & \multicolumn{1}{c}{175} & \multicolumn{1}{c}{175} \\ 
 Log Likelihood & \multicolumn{1}{c}{-58.00} & \multicolumn{1}{c}{-52.00} & \multicolumn{1}{c}{-55.00} \\ 
-AIC & \multicolumn{1}{c}{208.00} & \multicolumn{1}{c}{204.00} & \multicolumn{1}{c}{207.00} \\ 
+AIC & \multicolumn{1}{c}{208.00} & \multicolumn{1}{c}{204.00} & \multicolumn{1}{c}{206.00} \\ 
 \hline \\[-1.8ex] 
 \multicolumn{4}{l}{$^{***}$p $<$ .01; $^{**}$p $<$ .05; $^{*}$p $<$ .1} \\ 
 \multicolumn{4}{l}{County and year variables included in the models but not displayed. Robust (Huber-White) standard errors in parentheses.} \\ 
@@ -541,16 +593,11 @@ the probability of conviction for female defendants is greater than
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{stand_your_ground_article_files/figure-latex/unnamed-chunk-3.pdf}
+\includegraphics{stand_your_ground_article_files/figure-latex/unnamed-chunk-4.pdf}
 \caption{Effect of Victim's Race on Probability of Conviction for White
 and Non-White Defendants (95\% Confidence Intervals and Partial
 Residuals in Grey)}
 \end{figure}
-
-\pagebreak
-\includegraphics{stand_your_ground_article_files/figure-latex/unnamed-chunk-4.pdf}
-
-\pagebreak
 
 \begin{figure}[htbp]
 \centering
@@ -584,17 +631,17 @@ was not clearly on their own property, the victim did not clearly
 initiate, there were no clear witnesses, the defendant and victim were
 both male, and they were engaged in a non-domestic incident. Based on
 the results of the simulation, it is estimated that George Zimmerman's
-\emph{ex ante} probability of conviction was 0.7 (sd = 0.22). In other
-words, according to Model 2, \emph{ex ante} George Zimmerman was
-marginally more likely to be convicted than not, but with a notable
-margin of error which made his odds not very much better than those of a
-coin flip.\footnote{For a more precise graphical illustration of the
-  full distribution of expected outcomes, see Figure 4 in Supplementary
+\emph{ex ante} probability of conviction was 0.68 (sd = 0.22). In other
+words, according to Model 2, \emph{ex ante} George Zimmerman was more
+likely to be convicted than not, but with a notable margin of error
+which made his odds not clearly very much better than those of a coin
+flip.\footnote{For a more precise graphical illustration of the full
+  distribution of expected outcomes, see Figure 4 in Supplementary
   Information following the main text.} In a hypothetical case in which
 all of these factors are exactly the same except the victim is white,
 the expected probability of conviction is 0.98 (sd = 0.05). In summary,
 had Trayvon Martin been white, George Zimmerman's \emph{ex ante}
-probability of conviction would have changed by an average of 0.28
+probability of conviction would have changed by an average of 0.29
 (sd=0.2).
 
 To consider the case of Marissa Alexander, I conducted 1000 simulations
@@ -609,7 +656,7 @@ victim did not clearly initiate, there was at least one clear witness,
 and a female defendant and male victim were engaged in a domestic
 incident. Based on the results of this exercise, the \emph{ex ante}
 expected probability of conviction for Marissa Alexander given the
-objective facts of her case was an estimated 0.61 (sd = 0.28). In other
+objective facts of her case was an estimated 0.54 (sd = 0.27). In other
 words, according to Model 3, \emph{ex ante} Michelle Alexander was
 marginally more likely to be convicted than not but with a margin of
 error which made her odds statistically indistinguishable from those of
@@ -617,9 +664,95 @@ a coin flip.\footnote{For a more precise graphical illustration of the
   full distribution of expected outcomes, see Figure 5 in Supplementary
   Information following the main text.} In a hypothetical case in which
 all of these factors are exactly the same except the defendant is male,
-the expected probability of conviction becomes 0.11 (sd = 0.12). In
+the expected probability of conviction becomes 0.13 (sd = 0.14). In
 summary, had Marissa Alexander been male, her \emph{ex ante} probability
-of conviction would have changed by an average of -0.5 (sd=0.28).
+of conviction would have changed by an average of -0.41 (sd=0.26).
+
+\subsection{Robustness}\label{robustness}
+
+One common problem in regression analysis is that it is possible for
+unrepresentative cases to disproportionately drive model results. As the
+partial residuals in the effect plots above reveal some noticeable
+outliers, I calculate Bonferonni-adjusted p-values for the largest
+Studentized residuals in each model using normal distribution tests. In
+both models, the largest Studentized residual is not statistically
+significant, suggesting that the estimates above are unlikely to be
+artifacts of a few odd cases.\footnote{For the sake of brevity numerical
+  results are not reported but are reproducible from
+  \href{http://j.mp/syg_analysis}{j.mp/syg\_analysis}.}
+
+A more complicated problem for drawing statistical inferences from
+observational data is the possibility that the units of analysis are
+distributed into the different values of an independent variable by
+other covariates. If some covariate systematically shapes the
+probability a unit will take a certain value on the independent variable
+of interest, estimates for that independent variable will be biased. To
+guard against this problem, I use a genetic matching search algorithm to
+automatically create a subset of the original sample which is optimally
+balanced on the other covariates (Diamond and Sekhon 2012; Sekhon 2008).
+The algorithm identifies the weights which need to be applied to each
+covariate (including scores for the propensity to be ``treated'') to
+limit the sample to those matched pairs of treatment and control units
+which optimize balance on the covariates. From these subsets of cases
+the estimated average treatment effect will approximate that which would
+be inferred from a randomized experiment, assuming of course that all
+relevant covariates have been included in the matching procedures.
+
+Given that the main hypotheses relate to interaction terms, I conduct
+the matching procedures only on relevant subsets of the initial sample.
+For Model 2, the relevant subset includes only cases with white victims
+and the ``treatment'' effect to be estimated is the defendant being a
+person of color. For Model 3, the relevant subset includes only domestic
+cases and the ``treatment'' effect to be estimated is the defendant
+being female.
+
+Before proceeding, note that a drawback of matching techniques is the
+significant loss of information that occurrs in the reduction of an
+initial sample to only matched pairs. In the present case, this sample
+attrition is especially severe for two reasons. First, the original
+sample of 175 cases is already small relative to the large number of
+covariates including interaction terms. Second, limiting the matching
+analysis to subsets in order to straightforwardly estimate treatment
+effects for interactive hypotheses reduces the original sample to 106
+cases of white victims and 31 domestic cases. For Model 2, the matching
+procedures reduce the subset of white-victim cases to a subset of 18
+matched observations and for Model 3 the subset of domestic cases is
+reduced to 8 matched observations.
+
+Despite the drastic loss of information, matching estimates for both
+models are sized consistently with the estimates in the main regression
+models and statistically significant. For Model 2, the average treatment
+effect from being a defendant of color (in cases with white victims) is
+0.26 (standard error = 0.12, p = 0.03). Note that this is a different
+effect than that which was estimated in the thought experiment related
+to the Trayvon Martin case. There it was asked what the expected effect
+would have been had Trayvon Martin been white (varying the race of the
+victim), whereas the matching estimates relate to the effect of being a
+defendant of color in a case with a white victim (varying the race of
+the defendant). Nonetheless the matching estimate of 0.26 appears
+consistent with the estimate from Model 2 (about .1) given that the
+difference between white defendants and defendants of color in Model 2
+was compressed by the relatively high rate of conviction for all
+defendants in cases with white victims. Thus considering only matched
+pairs in only cases with white victims corroborates the results of Model
+2, suggesting that, if anything, the estimated racial effect from Model
+2 was biased downward.
+
+For Model 3, the average treatment effect from being a female defendant
+(in domestic cases) is 0.62 (standard error = 0.21, p = 0.003). Here the
+matching estimate can be directly compared to the thought experiment
+relating to the case of Marissa Alexander. The estimated effect after
+matching is similar to that derived from Model 3 reported above, from
+which it was estimated that had Marissa Alexander been male her
+probability of conviction would have changed by -0.41 (sd=0.26). Again
+the matching estimate suggests that, if anything, the estimated gender
+effect from Model 3 is conservative.
+
+Thus, it is unlikely the estimates presented here are merely artifacts
+of outliers or of imbalance in the propensity to be in one of the
+relevant treatment groups. The consistency of the effect sizes and their
+statistical significance in all cases increases confidence in both of
+the key findings.
 
 \subsection{Conclusion}\label{conclusion}
 
@@ -644,7 +777,7 @@ bias in SYG cases which controls for a wide variety of objective factors
 possibly correlated with race and/or gender. In stark contrast to John
 Lott's analysis submitted in testimony to the US Senate Judiciary
 Committee, I find evidence of both racial and gender bias in a sample of
-Florida SYG cases from 2006-2013 reported by \emph{The Tampa Bay Times}
+Florida SYG cases from 2006-2013 reported by the \emph{Tampa Bay Times}
 (``Florida's Stand Your Ground Law'' 2013).
 
 In particular, the probability of conviction for a white defendant
@@ -656,18 +789,18 @@ error). The gender bias in domestic cases appears to be even more
 pronounced. Conviction for a male defendant in a typical domestic case
 was found to be about 40\%, but for a female defendant in an otherwise
 objectively equivalent case, the probability of conviction was found to
-be about 80\%.
+be around 80\%.
 
 To put the findings in perspective, I also used simulations to consider
 how the probability of conviction would change in response to changes in
 racial and gender identities in two well-known and recent cases. In the
 case of George Zimmerman's killing of unarmed black teenager Trayvon
 Martin in 2012, I found that if Trayvon Martin had been white the
-probability of a conviction would have increased by an estimated 0.28,
-from 0.7 to 0.98. With respect to the case of Marissa Alexander's
+probability of a conviction would have increased by an estimated 0.29,
+from 0.68 to 0.98. With respect to the case of Marissa Alexander's
 warning shot against husband Rico Gray in a 2010 domestic dispute, I
 found that if Alexander had been a male the probability of a conviction
-would have decreased by an estimated 0.5, from 0.61 to 0.11. This
+would have decreased by an estimated 0.41, from 0.54 to 0.13. This
 statistical exercise is especially concerning for Michelle Alexander's
 case because it reveals that she is not only more likely to be convicted
 than a man would, but that \emph{ex ante} her most likely outcome is
@@ -697,14 +830,14 @@ your ground'' laws.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{stand_your_ground_article_files/figure-latex/unnamed-chunk-7.pdf}
+\includegraphics{stand_your_ground_article_files/figure-latex/unnamed-chunk-8-1.pdf}
 \caption{Probability of Conviction (Y) if Trayvon Martin (X) Had Been
 White (X1)}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{stand_your_ground_article_files/figure-latex/unnamed-chunk-8.pdf}
+\includegraphics{stand_your_ground_article_files/figure-latex/unnamed-chunk-9-1.pdf}
 \caption{Probability of Conviction (Y) if Marissa Alexander (X) Was Male
 (X1)}
 \end{figure}
@@ -727,9 +860,27 @@ Coates, Ta-Nehisi. 2013. ``How Stand Your Ground Relates To George
 Zimmerman.'' \emph{The Atlantic}, July.
 \url{http://www.theatlantic.com/national/archive/2013/07/how-stand-your-ground-relates-to-george-zimmerman/277829/}.
 
+Crenshaw, Kimberl{é}. 1989. ``Demarginalizing the Intersection of Race
+and Sex: A Black Feminist Critique of Antidiscrimination Doctrine,
+Feminist Theory and Antiracist Politics.'' Univesity of Chicago Legal
+Forum, 139--67.
+\url{http://scholar.google.com/scholar?q=related:8V_o-J4EaKgJ:scholar.google.com/\&hl=en\&num=20\&as_sdt=0,5}.
+
+---------. 1991. ``Mapping the Margins: Intersectionality, Identity
+Politics, and Violence Against Women of Color.'' \emph{Stanford Law
+Review} 43 (6). Stanford Law Review: 1241--99.
+doi:\href{http://dx.doi.org/10.2307/1229039}{10.2307/1229039}.
+
+Diamond, Alexis, and Jasjeet S Sekhon. 2012. ``Genetic Matching for
+Estimating Causal Effects: A General Multivariate Matching Method for
+Achieving Balance in Observational Studies.'' \emph{Review of Economics
+and Statistics} 95 (3). MIT Press: 932--45.
+doi:\href{http://dx.doi.org/10.1162/REST_a_00318}{10.1162/REST\_a\_00318}.
+\url{http://dx.doi.org/10.1162/REST_a_00318}.
+
 Flatow, Nicole. 2014. ``South Carolina Prosecutors Say Stand Your Ground
-Doesnt Apply To Victims Of Domestic Violence.''
-\url{http://thinkprogress.org/justice/2014/10/14/3579407/south-carolina-prosecutors-say-stand-your-ground-doesnt-apply-to-victims-of-domestic-violence/}.
+Doesnt Apply To Victims Of Domestic Violence.'' \emph{Think Progress},
+October. \url{http://thkpr.gs/3579407}.
 
 ``Florida's Stand Your Ground Law.'' 2013. \emph{Tampa Bay Times},
 August. \url{http://www.tampabay.com/stand-your-ground-law/}.
@@ -748,7 +899,7 @@ and Public Safety Implications of the Expanded Use of Deadly Force''}.
 Martin, Susan Taylor, Kris Hundley, and Connie Humburg. 2012. ``Race
 Plays Complex Role in Florida's 'Stand Your Ground' Law.'' \emph{Tampa
 Bay Times}, June.
-\url{http://www.tampabay.com/news/courts/criminal/race-plays-complex-role-in-floridas-stand-your-ground-law/1233152}.
+\url{http://j.mp/tampa-bay-times-race-plays-complex-role}.
 
 McCellan, Chandler, and Erdal Tekin. 2012. ``Stand Your Ground Laws,
 Homicides, and Injuries.'' \emph{NBER Working Paper}, June.
@@ -757,5 +908,10 @@ Homicides, and Injuries.'' \emph{NBER Working Paper}, June.
 Roman, John K. 2013. ``Race, Justifiable Homicide, and Stand Your Ground
 Laws: Analysis of FBI Supplementary Homicide Report Data.'' The Urban
 Institute. \url{http://www.urban.org/url.cfm?ID=412873}.
+
+Sekhon, Jasjeet S. 2008. ``Multivariate and Propensity Score Matching
+Software with Automated Balance Optimization: The Matching Package for
+R.'' \emph{Journal of Statistical Software}.
+\url{http://papers.ssrn.com/abstract=1009044}.
 
 \end{document}
