@@ -1,9 +1,7 @@
 ---
-title: "A Statistical Analysis of Racism and Sexism in \"Stand Your Ground\" Cases in Florida, 2006-2013"
-date: "`r format(Sys.time(), '%d %B %Y')`"
-author: |
-  Justin Murphy   
-  University of Southampton
+title: "Are \"Stand Your Ground\" Laws Racist and Sexist? A Statistical Analysis of Cases in Florida, 2006-2013"
+date: ""
+author: ""
 output:
   pdf_document:
     fig_caption: yes
@@ -13,10 +11,12 @@ output:
     keep_tex: yes
     latex_engine: xelatex
     toc: no
+citecolor: blue
 fontsize: 12pt
-geometry: margin=1.25in
+geometry: margin=1in
 linkcolor: blue
 classoption: article
+urlcolor: blue
 bibliography: mybib.bib
 ---
 
@@ -61,23 +61,7 @@ The only previous study which focuses on the effect of SYG laws on racial dispar
 
 ## Data and Methodoloy
 
-To test for the possibility of racial and gender bias in SYG cases, I gathered all the available data made available on the *Tampa Bay Times* website [@Anonymous:nYtEk2ve].^[I began by downloading a spreadsheet made available on the *Tampa Bay Times* website, which included only a small subset of the relevant variables included elsewhere on their website. To supplement this spreadsheet with the other factors available only through the separate webpages for each individual case, I used [Import.IO](http://import.io) to crawl and scrape the webpage of each case automatically. I then merged, cleaned, and pre-processed the spreadsheet made available by the Times and the spreasheet of scraped information. See also Footnote 3.] The final result was a data matrix of `r length(df$accused)`. The data matrix contains indicators for all the following factors related to each case, with the names I assigned each variable in parentheses.^[The specific data matrix used for the regression models can be found at [http://j.mp/model_data](http://j.mp/model_data). See also Footnote 3.]
-
-- Did the victim initiate the incident? (Victim Initiated)
-- Could the defendant retreat? (Defendant Could Retreat)
-- Did the defendant pursue the victim? (Defendant Pursued)
-- Did the defendant have a gun? (Defendant Gun)
-- Did the incident take place on the defendant's property? (Defendant's Property)
-- Was the victim killed? (Deaths)
-- How old was the victim and defendant? (Victim Age, Defendant Age)
-- Was there physical evidence? (Physical Evidence)
-- Was there at least one witness? (Witness)
-- Was the victim committing a crime? (Victim Crime)
-- Were the victim and defendant white or non-white? (Victim Race, Defendant Race)^[The decision to consider Black and Hispanic people together is imperfect and arguable, but seems to me justified by two concerns. First, this seems theoretically justified given that the concept of white supremacy suggests the primary racial distinction is between white and non-white groups. Second, considering that the analysis is already concerned with multiple interactions and the sample of data is not exceedingly large, considering Black and Hispanic people together simplifies an already complex analysis and saves limited degrees of freedom. Future research may explore whether disaggregating the race variables leads to different results.]
-- Were the victim and defendant female or male? (Victim Male, Defendant Male)^[Transgender identities were not gauged.]
-- Was the incident a domestic dispute? (Domestic)
-- Which county did the incident occur in?
-- Is there a time trend?
+To test for the possibility of racial and gender bias in SYG cases, I gathered all the available data made available on the *Tampa Bay Times* website [@Anonymous:nYtEk2ve].^[I began by downloading a spreadsheet made available on the *Tampa Bay Times* website, which included only a small subset of the relevant variables included elsewhere on their website. To supplement this spreadsheet with the other factors available only through the separate webpages for each individual case, I used [Import.IO](http://import.io) to crawl and scrape the webpage of each case automatically. I then merged, cleaned, and pre-processed the spreadsheet made available by the Times and the spreasheet of scraped information. See also Footnote 3.] The final result was a data matrix of `r length(df$accused)`. The data matrix contains indicators for all the following factors related to each case, as determined by the questions asked and answered by the *Tampa Bay Times*, with the names I assigned each variable in parentheses.^[The specific data matrix used for the regression models can be found at [http://j.mp/model_data](http://j.mp/model_data). See also Footnote 3.] Did the victim initiate the incident (Victim Initiated)? Could the defendant retreat (Defendant Could Retreat)? Did the defendant pursue the victim (Defendant Pursued)? Did the defendant have a gun (Defendant Gun)? Did the incident take place on the defendant's property (Defendant's Property)? Was the victim killed (Deaths)? How old was the victim and defendant (Victim Age, Defendant Age)? Was there physical evidence (Physical Evidence)? Was there at least one witness (Witness)? Was the victim committing a crime  (Victim Crime)? Were the victim and defendant white or non-white (Victim Race, Defendant Race)?^[The decision to consider Black and Hispanic people together is imperfect and arguable, but seems to me justified by two concerns. First, this seems theoretically justified given that the concept of white supremacy suggests the primary racial distinction is between white and non-white groups. Second, considering that the analysis is already concerned with multiple interactions and the sample of data is not exceedingly large, considering Black and Hispanic people together simplifies an already complex analysis and saves limited degrees of freedom. Future research may explore whether disaggregating the race variables leads to different results.] Were the victim and defendant female or male (Victim Male, Defendant Male)?^[Transgender identities were not gauged.] Was the incident a domestic dispute (Domestic)? Which county did the incident occur in (County)? Is there a time trend (Year)?
 
 For the present analysis, conviction refers to any case in which the defendant received a guilty verdict or took a plea deal; non-convictions refer to any case in which the defendant was acquitted, dismissed, granted immunity, or not charged.^[The inclusion of plea deals with guilty verdicts is not ideal because those who take pleas are not necessarily guilty. I considered removing plea deals row-wise but, given that they are almost as frequent as guilty verdicts (33, and 40, respectively), it does not seem that the improvement of the measure would be so great as to outweigh the loss of information from row-wise deletion. Furthermore, including plea deals with guilty verdicts is theoretically sensible because pleas are likely driven by the expectation that the defendant would be found guilty if tried. Of course, racial identity might shape whether a defendant fears they will be found guilty (innocent or not), but if that is the case then that is precisely why it is best to keep that information in the category of conviction.]
 
@@ -92,6 +76,8 @@ If previously perceived racial or gender bias is simply due to the fact that one
 ## Analysis
 
 Table 1 presents the results from three logistic regression analyses. Model 1 is a baseline model with all independent variables of interest included separately, whereas Models 2 and 3 introduce interaction terms to test whether race and gender condition the independent effects of certain primary variables. Each coefficient reflects the average change in log-odds of conviction associated with each corresponding independent variable. Specifically, each coefficient reflects the expected change in log-odds of conviction associated with the independent variable taking the value indicated by the variable's name, relative to the absence or opposite of that value. Standard errors in parentheses reflect the statistical uncertainty of the coefficients. Starred coefficients are those which are very unlikely to be observed merely by chance, according to conventional cutoffs. For instance, the coefficient for *Victim Initiated* in Model 1 suggests that, on average, a situation which the victim initiates has a log-odds of conviction 3.2 less than if the victim did not clearly initiate, assuming all the other independent variables are equal to their modal values. Because log-odds are not conveniently interpretable in terms of substantive effects, I postpone discussion of effect sizes for the following subsection.
+
+[Insert Table 1 about here.]
 
 First, a series of objective factors related to the incident appear to have clear and intuitively sensible effects on the likelihood of conviction. Victim initiation appears to have a relatively large and highly significant negative effect on the likelihood of conviction, robust across all three models. On the other hand, also intuitively sensisble, a clear ability for the defendant to retreat is associated with a significantly greater likelihood of conviction in all three models. Similarly, death of the victim appears, as we might expect, to significantly and robustly increase the probability of conviction. Perhaps surprisingly, however, defendants armed with a gun are significantly less likely to meet conviction. This is especially interesting given that conservative critics sometimes suggest that racial disparities in outcomes are spurious evidence of racism because people of color may be more likely to use guns in violent crimes [@JohnRLott:2013wd], the assumption being that guns rather than colored skin tend toward convictions. Although it is purely speculative, one might hypothesize that the negative association between guns and conviction is due to the fact that other types of weapons (and unarmed assaults) require the defendant to engage in overtly active behavior toward the victim, whereas those armed with guns can assault a victim without obviously, actively moving toward the victim.
 
@@ -158,36 +144,13 @@ model3classif<-table(model3$result$fitted.values>.5, model3$result$y)
 model3correct<-(model3classif[1,1] + model3classif[2,2])
 # (model3correct/nrow(df))*100
 # summary(model3)
-
-
-
-stargazer(model1, model2, model3, header=FALSE, font.size="scriptsize", align=TRUE,
-          title="Logistic Regressions for Dependent Variable $Conviction$",
-          dep.var.labels.include=FALSE, dep.var.caption=c(""),
-          style="ajps",
-          keep=c("victim_initiated", "victim_crime", "victim_unarmed", "defendant_pursued", "could_retreat",
-                        "accused_weapon", "deaths", "witness",
-                        "physical_evidence", "defendant_property", "type", "victim_race", "victim_gender",
-                        "victim_age", "accused_race", "accused_gender", "accused_age",
-                        "victim_race:accused_race", "victim_gender:accused_gender",
-                        "victim_race:victim_gender", "accused_race:accused_gender",
-                        "type:accused_gender", "type:victim_gender"),
-          covariate.labels=c("Victim Initiated", "Victim Crime", "Victim Unarmed", "Defendant Pursued",
-                             "Defendant Could Retreat", "Defendant Gun", "Deaths", "Witness", "Physical Evidence",
-                             "Defendant's Property", "Domestic", "Victim White", "Victim Male", "Victim Age", "Defendant White",
-                             "Defendant Male", "Defendant Age", "White Victim X White Defendant",
-                             "Male Victim X Male Defendant", "White Victim X Male Victim",
-                             "White Defendant X Male Defendant", "Domestic X Male Defendant",
-                             "Domestic X Male Victim"),
-          digits=2,
-          column.sep.width=c("0pt"),
-          notes=c("County and year variables included in the models but not displayed. Robust (Huber-White) standard errors in parentheses.")
-          )
 ```
 
-\pagebreak
+[Insert Figure 1 about here.]
 
 Figure 1 illustrates the key estimate of interest from Model 2 in terms of probability. As the graph reveals, the probability of conviction is rather high in general when all the variables in Model 2 are assumed to be at their modal values, but the probability of conviction for non-white defendants against white victims *approaches 1* and shows a strikingly smaller margin of error at a 95% confidence level. In other words, white defendants against white victims have, on average, about a 90% chance of conviction, but nonetheless there is a significant class of such defendants who are more likely to escape conviction; whereas, for non-white defendants in otherwise equivalent cases, there are no cases which are more likely to escape conviction. As Model 2 reveals, this difference is substantial enough that there is less than a 5% probability we would observe this difference due to random chance alone.
+
+[Insert Figure 2 about here.]
 
 Figure 2 illustrates the key estimate of interest from Model 3 in terms of probability. As the graph indicates, male defendants in domestic cases are significantly less likely to be convicted than female defendants in otherwise equivalent domestic cases. With respect to domestic cases, the gender bias is even more pronounced than the racial bias indicated in Figure 2. In otherwise comparable cases, the probability of conviction for male defendants is less than 40% whereas the probability of conviction for female defendants is greater than 80%.
 
@@ -247,16 +210,6 @@ mainmodel3<-glm(conviction ~ victim_initiated + victim_crime + victim_unarmed + 
 #                             family=binomial())
 
 
-```
-
-```{r, echo=FALSE, fig.height=5, fig.width=7, cache=FALSE, warning=FALSE, message=FALSE, fig.cap="Effect of Victim's Race on Probability of Conviction for White and Non-White Defendants (95% Confidence Intervals and Partial Residuals in Grey)"}
-require(visreg)
-visreg(mainmodel2, "victim_race", by="accused_race", scale="response", xlab="", ylab="Probability of Conviction", rug=3, partial=TRUE, alpha=.05, cond=list())
-```
-
-
-```{r, echo=FALSE, fig.height=5, fig.width=7, cache=FALSE, message=FALSE, warning=FALSE, fig.cap="Effect of Domesticity on Probability of Conviction for Male and Female Defendants (95% Confidence Intervals and Partial Residuals in Grey)"}
-visreg(mainmodel3, "type", by="accused_gender", scale="response", xlab="", ylab="Probability of Conviction", partial=TRUE, rug=3, alpha=.05, cond=list())
 ```
 
 ```{r, echo=FALSE, fig.height=4, fig.width=5, cache=TRUE, message=FALSE, warning=FALSE}
@@ -354,9 +307,9 @@ s.out.ma <- sim(model3, x = x.lo, x1 = x.hi)
 
 How do these statistical findings speak to the justice of past and future legal cases? With caution, the analyses presented here can be used to consider how legal outcomes would be expected to change, on average, given different racial and gender identities for defendants and victims. To make the findings more substantively interpretable in light of publicly well-known cases, I consider two counterfactual questions. First, how would George Zimmerman's probability of conviction change had Trayvon Martin been white but all the other other objective factors of the case had been the same as they were? Second, with respect to Marissa Alexendar's currently on-going appeal against her previous conviction, how would her probability of conviction change had she been a male defendant in an otherwise equivalent case?
 
-To consider the case of George Zimmerman, I conducted 1000 simulations of Model 2 to estimate the probability distribution of conviction in a 2012 case where the defendant is non-white, the defendant is 28 years old, the victim is non-white, the victim is 17 years old, the victim died, the defendant clearly had a gun, the victim was clearly unarmed, the victim was not clearly comitting a crime, the defendant actively pursued the victim, the defendant could have retreated, the defendant was not clearly on their own property, the victim did not clearly initiate, there were no clear witnesses, the defendant and victim were both male, and they were engaged in a non-domestic incident. Based on the results of the simulation, it is estimated that George Zimmerman's *ex ante* probability of conviction was `r mean(s.out.gz$qi$ev1)` (sd = `r sd(s.out.gz$qi$ev1)`). In other words, according to Model 2, *ex ante* George Zimmerman was more likely to be convicted than not, but with a notable margin of error which made his odds not clearly very much better than those of a coin flip.^[For a more precise graphical illustration of the full distribution of expected outcomes, see Figure 4 in Supplementary Information following the main text.] In a hypothetical case in which all of these factors are exactly the same except the victim is white, the expected probability of conviction is `r mean(s.out.gz$qi$ev2)` (sd = `r sd(s.out.gz$qi$ev2)`). In summary, had Trayvon Martin been white, George Zimmerman's *ex ante* probability of conviction would have changed by an average of `r mean(s.out.gz$qi$fd)` (sd=`r sd(s.out.gz$qi$fd)`).
+To consider the case of George Zimmerman, I conducted 1000 simulations of Model 2 to estimate the probability distribution of conviction in a 2012 case where the defendant is non-white, the defendant is 28 years old, the victim is non-white, the victim is 17 years old, the victim died, the defendant clearly had a gun, the victim was clearly unarmed, the victim was not clearly committing a crime, the defendant actively pursued the victim, the defendant could have retreated, the defendant was not clearly on their own property, the victim did not clearly initiate, there were no clear witnesses, the defendant and victim were both male, and they were engaged in a non-domestic incident. Based on the results of the simulation, it is estimated that George Zimmerman's *ex ante* probability of conviction was `r mean(s.out.gz$qi$ev1)` (sd = `r sd(s.out.gz$qi$ev1)`). In other words, according to Model 2, *ex ante* George Zimmerman was more likely to be convicted than not, but with a notable margin of error which made his odds not clearly very much better than those of a coin flip.^[For a more precise graphical illustration of the full distribution of expected outcomes, see Figure 4 in Supplementary Information following the main text.] In a hypothetical case in which all of these factors are exactly the same except the victim is white, the expected probability of conviction is `r mean(s.out.gz$qi$ev2)` (sd = `r sd(s.out.gz$qi$ev2)`). In summary, had Trayvon Martin been white, George Zimmerman's *ex ante* probability of conviction would have changed by an average of `r mean(s.out.gz$qi$fd)` (sd=`r sd(s.out.gz$qi$fd)`).
 
-To consider the case of Marissa Alexander, I conducted 1000 simulations of Model 3 to estimate the probability distribution of a defendant being convicted in a 2010 case where the defendant is non-white, the defendant is 31 years old, the victim is non-white, the victim is 34 years old, the victim did not die, the defendant clearly had a gun, the victim was clearly unarmed, the victim was not clearly comitting a crime, the defendant did not clearly pursue the victim, the defendant could have retreated, the defendant was not clearly on their own property, the victim did not clearly initiate, there was at least one clear witness, and a female defendant and male victim were engaged in a domestic incident. Based on the results of this exercise, the *ex ante* expected probability of conviction for Marissa Alexander given the objective facts of her case was an estimated `r mean(s.out.ma$qi$ev1)` (sd = `r sd(s.out.ma$qi$ev1)`). In other words, according to Model 3, *ex ante* Michelle Alexander was marginally more likely to be convicted than not but with a margin of error which made her odds statistically indistinguishable from those of a coin flip.^[For a more precise graphical illustration of the full distribution of expected outcomes, see Figure 5 in Supplementary Information following the main text.] In a hypothetical case in which all of these factors are exactly the same except the defendant is male, the expected probability of conviction becomes `r mean(s.out.ma$qi$ev2)` (sd = `r sd(s.out.ma$qi$ev2)`). In summary, had Marissa Alexander been male, her *ex ante* probability of conviction would have changed by an average of `r mean(s.out.ma$qi$fd)` (sd=`r sd(s.out.ma$qi$fd)`).
+To consider the case of Marissa Alexander, I conducted 1000 simulations of Model 3 to estimate the probability distribution of a defendant being convicted in a 2010 case where the defendant is non-white, the defendant is 31 years old, the victim is non-white, the victim is 34 years old, the victim did not die, the defendant clearly had a gun, the victim was clearly unarmed, the victim was not clearly committing a crime, the defendant did not clearly pursue the victim, the defendant could have retreated, the defendant was not clearly on their own property, the victim did not clearly initiate, there was at least one clear witness, and a female defendant and male victim were engaged in a domestic incident. Based on the results of this exercise, the *ex ante* expected probability of conviction for Marissa Alexander given the objective facts of her case was an estimated `r mean(s.out.ma$qi$ev1)` (sd = `r sd(s.out.ma$qi$ev1)`). In other words, according to Model 3, *ex ante* Michelle Alexander was marginally more likely to be convicted than not but with a margin of error which made her odds statistically indistinguishable from those of a coin flip.^[For a more precise graphical illustration of the full distribution of expected outcomes, see Figure 5 in Supplementary Information following the main text.] In a hypothetical case in which all of these factors are exactly the same except the defendant is male, the expected probability of conviction becomes `r mean(s.out.ma$qi$ev2)` (sd = `r sd(s.out.ma$qi$ev2)`). In summary, had Marissa Alexander been male, her *ex ante* probability of conviction would have changed by an average of `r mean(s.out.ma$qi$fd)` (sd=`r sd(s.out.ma$qi$fd)`).
 
 ## Robustness
 
@@ -479,8 +432,6 @@ For Model 3, the average treatment effect from being a female defendant (in dome
 
 Thus, it is unlikely the estimates presented here are merely artifacts of outliers or of imbalance in the propensity to be in one of the relevant treatment groups. The consistency of the effect sizes and their statistical significance in all cases increases confidence in both of the key findings.
 
-
-
 ## Conclusion
 
 Though many critics argue that "stand your ground" (SYG) laws are characterized by racism and sexism in their outcomes, almost all research on this question has been unable to control for a wide variety of other factors which defenders of SYG laws commonly invoke to explain away the implication of racial or gender bias. The critique of SYG laws has remained vulnerable to the conservative defense that SYG laws are not, but only seem to be, racist or sexist because certain racial or gender types are more or less likely to be involved in certain types of cases which are objectively more or less likely to end in legitimate convictions. Indeed, the only previous statistical analysis which sought to control for a wide variety of objective factors concluded precisely that there is no racial bias in the outcome of SYG cases after controlling for other objective factors relevant to each case [@JohnRLott:2013wd].
@@ -493,16 +444,47 @@ To put the findings in perspective, I also used simulations to consider how the 
 
 In summary, the analysis presented here provides striking evidence of both racial and gender bias in the outcomes of Florida cases between 2006-2013 in which "stand your ground" laws are invoked. It reveals fundamental flaws in a previous analysis submitted in testimony to the US Senate Judiciary Committee [@JohnRLott:2013wd] and finds unreliable its conclusions of no racial bias. Finally, this research note informs important public debate about the possibility of racism and sexism in the application of SYG laws, suggesting that lawmakers and judges have paid inadequate heed to the racial and gender implications of "stand your ground" laws.
 
-\clearpage
+\pagebreak
 
-## Supplementary Information
+```{r, echo=FALSE, results='asis', cache=FALSE, message=FALSE, error=FALSE, warning=FALSE}
+require(Zelig)
+require(stargazer)
 
-```{r, echo=FALSE, fig.height=8.5, fig.width=7, cache=TRUE, message=FALSE, fig.cap="Probability of Conviction (Y) if Trayvon Martin (X) Had Been White (X1)", warning=FALSE}
-plot(s.out.gz)
+stargazer(model1, model2, model3, header=FALSE, font.size="scriptsize", align=TRUE,
+          title="Logistic Regressions for Dependent Variable $Conviction$",
+          dep.var.labels.include=FALSE, dep.var.caption=c(""),
+          style="ajps",
+          keep=c("victim_initiated", "victim_crime", "victim_unarmed", "defendant_pursued", "could_retreat",
+                        "accused_weapon", "deaths", "witness",
+                        "physical_evidence", "defendant_property", "type", "victim_race", "victim_gender",
+                        "victim_age", "accused_race", "accused_gender", "accused_age",
+                        "victim_race:accused_race", "victim_gender:accused_gender",
+                        "victim_race:victim_gender", "accused_race:accused_gender",
+                        "type:accused_gender", "type:victim_gender"),
+          covariate.labels=c("Victim Initiated", "Victim Crime", "Victim Unarmed", "Defendant Pursued",
+                             "Defendant Could Retreat", "Defendant Gun", "Deaths", "Witness", "Physical Evidence",
+                             "Defendant's Property", "Domestic", "Victim White", "Victim Male", "Victim Age", "Defendant White",
+                             "Defendant Male", "Defendant Age", "White Victim X White Defendant",
+                             "Male Victim X Male Defendant", "White Victim X Male Victim",
+                             "White Defendant X Male Defendant", "Domestic X Male Defendant",
+                             "Domestic X Male Victim"),
+          digits=2,
+          column.sep.width=c("0pt"),
+          notes=c("County and Year variables included in the models but not displayed. Robust (Huber-White) standard errors in parentheses.")
+          )
 ```
 
-```{r, echo=FALSE, fig.height=8.5, fig.width=7, cache=TRUE, message=FALSE, fig.cap="Probability of Conviction (Y) if Marissa Alexander (X) Was Male (X1)", warning=FALSE}
-plot(s.out.ma)
+\pagebreak
+
+```{r, echo=FALSE, fig.height=5, fig.width=7, cache=FALSE, warning=FALSE, message=FALSE, fig.cap="Effect of Victim's Race on Probability of Conviction for White and Non-White Defendants (95% Confidence Intervals and Partial Residuals in Grey)"}
+require(visreg)
+visreg(mainmodel2, "victim_race", by="accused_race", scale="response", xlab="", ylab="Probability of Conviction", rug=3, partial=TRUE, alpha=.05, cond=list())
+```
+
+\pagebreak
+
+```{r, echo=FALSE, fig.height=5, fig.width=7, cache=FALSE, message=FALSE, warning=FALSE, fig.cap="Effect of Domesticity on Probability of Conviction for Male and Female Defendants (95% Confidence Intervals and Partial Residuals in Grey)"}
+visreg(mainmodel3, "type", by="accused_gender", scale="response", xlab="", ylab="Probability of Conviction", partial=TRUE, rug=3, alpha=.05, cond=list())
 ```
 
 \pagebreak
