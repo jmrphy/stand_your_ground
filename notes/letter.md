@@ -1,3 +1,0 @@
-added information for Dooley and Zimmerman to import_io.csv because they didn't scrape correctly. - 3/11/2014
-
-cleaing
