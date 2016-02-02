@@ -65,7 +65,35 @@ The only previous study which focuses on the effect of SYG laws on racial dispar
 
 To test for the possibility of racial and gender bias in SYG cases, I gathered and processed all the relevant data made available on the *Tampa Bay Times* website [@Anonymous:nYtEk2ve].^[I began by downloading a spreadsheet made available on the *Tampa Bay Times* website, which included only a small subset of the relevant variables included elsewhere on their website. To supplement this spreadsheet with the other factors available only through the separate webpages for each individual case, I used [Import.IO](http://import.io) to crawl and scrape the webpage of each case automatically. I then merged, cleaned, and pre-processed the spreadsheet made available by the *Times* and the spreadsheet of scraped information. All of the raw data and the code necessary to reproduce the findings below are available in the replication archive.] The final result is a data matrix of `r length(df$accused)` observations. The data matrix contains indicators for all the following factors related to each case, as determined by the questions asked and answered by the *Tampa Bay Times*, with the names I assigned each variable in parentheses. Did the victim initiate the incident (Victim Initiated)? Could the defendant retreat (Defendant Could Retreat)? Did the defendant pursue the victim (Defendant Pursued)? Did the defendant have a gun (Defendant Gun)? Did the incident take place on the defendant's property (Defendant's Property)? Was the victim killed (Deaths)? How old was the victim and defendant (Victim Age, Defendant Age)? Was there physical evidence (Physical Evidence)? Was there at least one witness (Witness)? Was the victim committing a crime  (Victim Crime)? Were the victim and defendant white or non-white (Victim Race, Defendant Race)?^[The decision to consider Black and Hispanic people together is imperfect and arguable, but seems to me justified by two concerns. First, this seems theoretically justified given that the concept of white supremacy suggests the primary racial distinction is between white and non-white groups. Second, considering that the analysis is already concerned with multiple interactions and the sample of data is not exceedingly large, considering Black and Hispanic people together simplifies an already complex analysis and saves limited degrees of freedom. Future research may explore whether disaggregating the race variables leads to different results.] Were the victim and defendant female or male (Victim Male, Defendant Male)?^[Transgender identities were not gauged.] Was the incident a domestic dispute (Domestic)? Which county did the incident occur in (County)? Is there a time trend (Year)?
 
-For the present analysis, conviction refers to any case in which the defendant received a guilty verdict or took a plea deal; non-convictions refer to any case in which the defendant was acquitted, dismissed, granted immunity, or not charged.^[The inclusion of plea deals with guilty verdicts is not ideal because those who take pleas are not necessarily guilty. I considered removing plea deals row-wise but, given that they are almost as frequent as guilty verdicts (33, and 40, respectively), it does not seem that the improvement of the measure would be so great as to outweigh the loss of information from row-wise deletion. Furthermore, including plea deals with guilty verdicts is theoretically sensible because pleas are likely driven by the expectation that the defendant would be found guilty if tried. Of course, racial identity might shape whether a defendant fears they will be found guilty (innocent or not), but if that is the case then that is precisely why it is best to keep that information in the category of conviction.]
+For the present analysis, conviction refers to any case in which the defendant received a guilty verdict or took a plea deal; non-convictions refer to any case in which the defendant was acquitted, dismissed, granted immunity, or not charged.The inclusion of plea deals with guilty verdicts is not ideal because those who take pleas are not necessarily guilty. I considered removing plea deals row-wise but, given that they are almost as frequent as guilty verdicts (33, and 40, respectively), it does not seem that the improvement of the measure would be so great as to outweigh the loss of information from row-wise deletion. Furthermore, including plea deals with guilty verdicts is theoretically sensible because pleas are likely driven by the expectation that the defendant would be found guilty if tried. Of course, racial identity might shape whether a defendant fears they will be found guilty (innocent or not), but if that is the case then that is precisely why it is best to keep that information in the category of conviction. Ultimately, although plea deals and guilty verdicts are different paths to conviction, they are equally well captured by the concept of conviction insofar as they are both outcomes in which the criminal justice system classifies the defendant as guilty.
+
+```{r, echo=FALSE, results='asis', cache=FALSE, message=FALSE, error=FALSE, warning=FALSE}
+library(reporttools)
+
+summaryvars<-subset(df, select=c("victim_initiated", "victim_crime", "victim_unarmed", "defendant_pursued",
+                            "could_retreat", "accused_weapon", "deaths", "witness",
+                            "physical_evidence", "defendant_property", "type", "victim_race",
+                            "victim_gender", "victim_age", "accused_race", "accused_gender",
+                            "accused_age", "year"))
+
+summaryvars$deaths<-as.factor(summaryvars$deaths)
+levels(summaryvars$deaths)<-c("Victim was not killed", "Victim was killed")
+
+tableContinuous(summaryvars[,sapply(summaryvars, is.numeric)],
+                stats = c("n", "min", "median", "mean", "max", "s", "na"),
+                cap="Summary statistics for numerical variables",
+                lab="Summary statistics for numerical variables")
+
+tableNominal(summaryvars[,!sapply(summaryvars, is.numeric)],
+             stats = c("n", "min", "median", "mean", "max", "s", "na"),
+                cap="Summary statistics for categorical variables",
+                lab="Summary statistics for categorical variables",
+                caption.placement = "top",
+                add.to.row = list(list(42),  
+             "\\hline  \\multicolumn{5}{l}{\\textbf{Note: }
+             The variable county was omitted.} \\\\"))
+
+```
 
 Many variables included different categories to indicate uncertainty, such as "disputed", "unknown", or "unclear." In these cases, I adopted a principle of giving benefit of the doubt to the individual in question, counting any uncertainty noted by the *Tampa Bay Times* as not applying to the individual (whether victim or defendant). For instance, the variable *Witness* is coded such that, if there is not *clearly* at least one witness confirmed by the *Tampa Bay Times*, then it takes a value of "No clear witness(es)" and otherwise takes a value of "Clear witness(es)." Likewise, the variable *Victim Crime* takes a value of "Victim was committing a crime" in unambiguous cases but a value of "Victim was not clearly committing a crime" whenever the Times noted uncertainty.
 
@@ -107,8 +135,8 @@ model1<-zelig(conviction ~ victim_initiated + victim_crime + victim_unarmed + de
       model="logit",
       cite=FALSE,
       robust=TRUE)
-model1classif<-table(model1$result$fitted.values>.5, model1$result$y)
-model1correct<-(model1classif[1,1] + model1classif[2,2])
+#model1classif<-table(model1$result$fitted.values>.5, model1$result$y)
+#model1correct<-(model1classif[1,1] + model1classif[2,2])
 # (model1correct/nrow(df))*100
 # summary(model1)
 
@@ -124,8 +152,8 @@ model2<-zelig(conviction ~ victim_initiated + victim_crime + victim_unarmed + de
       cite=FALSE,
       robust=TRUE)
 
-model2classif<-table(model2$result$fitted.values>.5, model2$result$y)
-model2correct<-(model2classif[1,1] + model2classif[2,2])
+#model2classif<-table(model2$result$fitted.values>.5, model2$result$y)
+#model2correct<-(model2classif[1,1] + model2classif[2,2])
 # (model2correct/nrow(df))*100
 # summary(model2)
 
@@ -142,8 +170,8 @@ model3<-zelig(conviction ~ victim_initiated + victim_crime + victim_unarmed + de
       cite=FALSE,
       robust=TRUE)
 
-model3classif<-table(model3$result$fitted.values>.5, model3$result$y)
-model3correct<-(model3classif[1,1] + model3classif[2,2])
+#model3classif<-table(model3$result$fitted.values>.5, model3$result$y)
+#model3correct<-(model3classif[1,1] + model3classif[2,2])
 # (model3correct/nrow(df))*100
 # summary(model3)
 ```
@@ -453,8 +481,8 @@ require(Zelig)
 require(stargazer)
 
 stargazer(model1, model2, model3, header=FALSE, font.size="scriptsize", align=TRUE,
-          title="Logistic Regressions for Dependent Variable $Conviction$",
-          dep.var.labels.include=FALSE, dep.var.caption=c(""),
+          title="Logistic Regressions for Dependent Variable Conviction",
+          dep.var.labels.include=FALSE,
           style="ajps",
           keep=c("victim_initiated", "victim_crime", "victim_unarmed", "defendant_pursued", "could_retreat",
                         "accused_weapon", "deaths", "witness",
@@ -490,6 +518,48 @@ visreg(mainmodel3, "type", by="accused_gender", scale="response", xlab="", ylab=
 ```
 
 \pagebreak
+
+## Appendix
+
+```{r, echo=FALSE, results='asis', message=FALSE, error=FALSE, warning=FALSE}
+setwd("~/Dropbox/gh_projects/florida_syg")
+
+dfmaster<-read.csv("cleaned_data/florida_syg_master_data.csv", stringsAsFactors=TRUE)
+
+dfmaster$conviction<-factor(dfmaster$conviction, levels=c("No Conviction", "Conviction"))
+dfmaster$victim_unarmed<-factor(dfmaster$victim_unarmed, levels=c("Victim not clearly unarmed", "Victim clearly unarmed"))
+dfmaster$victim_crime<-factor(dfmaster$victim_crime, levels=c("Victim was not clearly committing a crime", "Victim was committing a crime"))
+dfmaster$could_retreat<-factor(dfmaster$could_retreat, levels=c("Defendant could not clearly have retreated", "Defendant could have retreated"))
+dfmaster$accused_weapon<-factor(dfmaster$accused_weapon, levels=c("Defendant did not clearly have a gun", "Defendant clearly had a gun"))
+dfmaster$witness<-factor(dfmaster$witness, levels=c("No clear witness(es)", "Clear witness(es)"))
+dfmaster$type<-factor(dfmaster$type, levels=c("Non-domestic", "Domestic"))
+
+
+mastervars<-subset(dfmaster, select=c("victim_initiated", "victim_crime", "victim_unarmed", "defendant_pursued",
+                            "could_retreat", "accused_weapon", "deaths", "witness",
+                            "physical_evidence", "defendant_property", "type", "victim_race",
+                            "victim_gender", "victim_age", "accused_race", "accused_gender",
+                            "accused_age", "year"))
+
+
+tableContinuous(mastervars[,sapply(mastervars, is.numeric)],
+                stats = c("n", "min", "median", "mean", "max", "s", "na"),
+                cap="Summary statistics for numerical variables",
+                lab="Summary statistics for numerical variables")
+
+tableNominal(mastervars[,!sapply(mastervars, is.numeric)],
+             stats = c("n", "min", "median", "mean", "max", "s", "na"),
+                cap="Summary statistics for categorical variables",
+                lab="Summary statistics for categorical variables",
+                caption.placement = "top",
+                add.to.row = list(list(42),  
+             "\\hline  \\multicolumn{5}{l}{\\textbf{Note: }
+             The variable county was omitted.} \\\\"))
+
+
+
+```
+
 
 \setlength\parindent{0pt}
 

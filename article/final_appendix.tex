@@ -1,0 +1,130 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{longtable}
+
+\title{Supplementary Information}
+\author{The Author}
+%\date{}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+
+{\footnotesize
+\begin{longtable}{lrrrrrrr}
+\caption{Summary statistics for numerical variables} \\
+ \textbf{Variable} & $\mathbf{n}$ & \textbf{Min} & $\mathbf{\widetilde{x}}$ & $\mathbf{\bar{x}}$ & \textbf{Max} & $\mathbf{s}$ & \textbf{\#NA} \\ 
+  \hline
+deaths & 236 &    0 &    1 &    0.6 &    2 &  0.6 &  1 \\ 
+  victim\_age & 222 &    9 &   30 &   32.5 &   79 & 13.4 & 15 \\ 
+  accused\_age & 237 &   14 &   33 &   36.0 &   81 & 14.4 &  0 \\ 
+  year & 237 & 2005 & 2009 & 2009.2 & 2013 &  1.9 &  0 \\ 
+  \hline
+\label{Summary statistics for numerical variables}
+\end{longtable}
+}
+
+
+{\footnotesize
+\begin{longtable}{ll|rrr}
+\caption{Summary statistics for categorical variables} \\ 
+ \textbf{Variable} & \textbf{Levels} & $\mathbf{n}$ & $\mathbf{\%}$ & $\mathbf{\sum \%}$ \\ 
+  \hline
+victim\_initiated & Victim did not clearly initiate & 133 & 56.1 & 56.1 \\ 
+   & Victim initiated & 104 & 43.9 & 100.0 \\ 
+   \hline
+ & all & 237 & 100.0 &  \\ 
+   \hline
+\hline
+victim\_crime & Victim was not clearly committing a crime & 190 & 80.2 & 80.2 \\ 
+   & Victim was committing a crime & 47 & 19.8 & 100.0 \\ 
+   \hline
+ & all & 237 & 100.0 &  \\ 
+   \hline
+\hline
+victim\_unarmed & Victim not clearly unarmed & 76 & 32.1 & 32.1 \\ 
+   & Victim clearly unarmed & 161 & 67.9 & 100.0 \\ 
+   \hline
+ & all & 237 & 100.0 &  \\ 
+   \hline
+\hline
+defendant\_pursued & Defendant did not clearly pursue & 167 & 70.5 & 70.5 \\ 
+   & Defendant pursued & 70 & 29.5 & 100.0 \\ 
+   \hline
+ & all & 237 & 100.0 &  \\ 
+   \hline
+\hline
+could\_retreat & Defendant could not clearly have retreated & 102 & 43.0 & 43.0 \\ 
+   & Defendant could have retreated & 135 & 57.0 & 100.0 \\ 
+   \hline
+ & all & 237 & 100.0 &  \\ 
+   \hline
+\hline
+accused\_weapon & Defendant did not clearly have a gun & 87 & 36.7 & 36.7 \\ 
+   & Defendant clearly had a gun & 150 & 63.3 & 100.0 \\ 
+   \hline
+ & all & 237 & 100.0 &  \\ 
+   \hline
+\hline
+witness & No clear witness(es) & 83 & 35.0 & 35.0 \\ 
+   & Clear witness(es) & 154 & 65.0 & 100.0 \\ 
+   \hline
+ & all & 237 & 100.0 &  \\ 
+   \hline
+\hline
+physical\_evidence & No clear physical evidence & 117 & 49.4 & 49.4 \\ 
+   & Physical evidence & 120 & 50.6 & 100.0 \\ 
+   \hline
+ & all & 237 & 100.0 &  \\ 
+   \hline
+\hline
+defendant\_property & Not clearly on property of the defendant & 164 & 69.2 & 69.2 \\ 
+   & On property of the defendant & 73 & 30.8 & 100.0 \\ 
+   \hline
+ & all & 237 & 100.0 &  \\ 
+   \hline
+\hline
+type & Non-domestic & 198 & 83.9 & 83.9 \\ 
+   & Domestic & 38 & 16.1 & 100.0 \\ 
+   \hline
+ & all & 236 & 100.0 &  \\ 
+   \hline
+\hline
+victim\_race & Non-white victim & 92 & 40.5 & 40.5 \\ 
+   & White victim & 135 & 59.5 & 100.0 \\ 
+   \hline
+ & all & 227 & 100.0 &  \\ 
+   \hline
+\hline
+victim\_gender & Female victim & 14 & 6.1 & 6.1 \\ 
+   & Male victim & 215 & 93.9 & 100.0 \\ 
+   \hline
+ & all & 229 & 100.0 &  \\ 
+   \hline
+\hline
+accused\_race & Non-white defendant & 92 & 39.0 & 39.0 \\ 
+   & White defendant & 144 & 61.0 & 100.0 \\ 
+   \hline
+ & all & 236 & 100.0 &  \\ 
+   \hline
+\hline
+accused\_gender & Female defendant & 26 & 11.0 & 11.0 \\ 
+   & Male defendant & 211 & 89.0 & 100.0 \\ 
+   \hline
+ & all & 237 & 100.0 &  \\ 
+   \hline  \multicolumn{5}{l}{\textbf{Note: }
+             The variable county was omitted.} \\ \hline
+\hline
+\hline
+\label{Summary statistics for categorical variables}
+\end{longtable}
+}
+
+\end{document}  

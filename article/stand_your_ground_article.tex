@@ -1,6 +1,7 @@
 \documentclass[12pt,article]{article}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
+\usepackage{longtable}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
@@ -189,12 +190,12 @@ distinction between what should be counted as ``conviction'' and ``not
 conviction'' is far from obvious and, as with all statistical analysis,
 requires reasoned argument and transparency from the analyst. Yet, Lott
 provides no discussion.Second, his models only include as many as 78 of
-the total 237 cases. Because there is no discussion of the data cleaing
+the total 237 cases. Because there is no discussion of the data cleaning
 process, it is unclear why the analysis is conducted on less than one
 third of the total cases, but it leaves open the significant question of
 whether one might find different results if more cases were to be
 included. Third, both of his two regression models are overfit, with
-each one having at least one case completley determined by the
+each one having at least one case completely determined by the
 predictors. Regression analysis assumes that the dependent variable is a
 function of several predictors and some error term or, in other words,
 it assumes a systematic and stochastic component in the process that
@@ -286,19 +287,79 @@ did the incident occur in (County)? Is there a time trend (Year)?
 For the present analysis, conviction refers to any case in which the
 defendant received a guilty verdict or took a plea deal; non-convictions
 refer to any case in which the defendant was acquitted, dismissed,
-granted immunity, or not charged.\footnote{The inclusion of plea deals
-  with guilty verdicts is not ideal because those who take pleas are not
-  necessarily guilty. I considered removing plea deals row-wise but,
-  given that they are almost as frequent as guilty verdicts (33, and 40,
-  respectively), it does not seem that the improvement of the measure
-  would be so great as to outweigh the loss of information from row-wise
-  deletion. Furthermore, including plea deals with guilty verdicts is
-  theoretically sensible because pleas are likely driven by the
-  expectation that the defendant would be found guilty if tried. Of
-  course, racial identity might shape whether a defendant fears they
-  will be found guilty (innocent or not), but if that is the case then
-  that is precisely why it is best to keep that information in the
-  category of conviction.}
+granted immunity, or not charged. The inclusion of plea deals with guilty verdicts is not ideal because those who take pleas are not necessarily guilty. I considered removing plea deals row-wise but, given that they are almost as frequent as guilty verdicts (33, and 40, respectively), it does not seem that the improvement of the measure would be so great as to outweigh the loss of information from row-wise deletion. Furthermore, including plea deals with guilty verdicts is theoretically sensible because pleas are likely driven by the expectation that the defendant would be found guilty if tried. Of course, racial identity might shape whether a defendant fears they will be found guilty (innocent or not), but if that is the case then that is precisely why it is best to keep that information in the category of conviction. Ultimately, although plea deals and guilty verdicts are different paths to conviction, they are equally well captured by the concept of conviction insofar as they are both outcomes in which the criminal justice system classifies the defendant as guilty.
+  
+\pagebreak
+
+\singlespacing
+
+{\footnotesize
+\begin{longtable}{lrrrrrrr}
+\caption{Summary statistics for numerical variables} \\
+ \textbf{Variable} & $\mathbf{n}$ & \textbf{Min} & $\mathbf{\widetilde{x}}$ & $\mathbf{\bar{x}}$ & \textbf{Max} & $\mathbf{s}$ & \textbf{\#NA} \\ 
+  \hline
+  victim\_age & 175 &   15 &   30 &   32.1 &   79 & 12.8 & 0 \\ 
+  accused\_age & 175 &   14 &   35 &   37.1 &   81 & 14.6 & 0 \\ 
+  year & 175 & 2005 & 2009 & 2009.1 & 2013 &  2.0 & 0 \\ \hline
+\label{Summary statistics for numerical variables}
+\end{longtable}
+}
+{\footnotesize
+\begin{longtable}{ll|rrr}
+\caption{Summary statistics for categorical variables} \\ 
+ \textbf{Variable} & \textbf{Levels} & $\mathbf{n}$ & $\mathbf{\%}$ & $\mathbf{\sum \%}$ \\ 
+  \hline
+victim\_initiated & Victim did not clearly initiate & 96 & 54.9 & 54.9 \\ 
+   & Victim initiated & 79 & 45.1 & 100.0 \\ 
+\hline
+victim\_crime & Victim was not clearly committing a crime & 137 & 78.3 & 78.3 \\ 
+   & Victim was committing a crime & 38 & 21.7 & 100.0 \\ 
+\hline
+victim\_unarmed & Victim not clearly unarmed & 50 & 28.6 & 28.6 \\ 
+   & Victim clearly unarmed & 125 & 71.4 & 100.0 \\ 
+\hline
+defendant\_pursued & Defendant did not clearly pursue & 126 & 72.0 & 72.0 \\ 
+   & Defendant pursued & 49 & 28.0 & 100.0 \\ 
+\hline
+could\_retreat & Defendant could not clearly have retreated & 72 & 41.1 & 41.1 \\ 
+   & Defendant could have retreated & 103 & 58.9 & 100.0 \\ 
+\hline
+accused\_weapon & Defendant did not clearly have a gun & 63 & 36.0 & 36.0 \\ 
+   & Defendant clearly had a gun & 112 & 64.0 & 100.0 \\ 
+\hline
+deaths & Victim was not killed & 75 & 42.9 & 42.9 \\ 
+   & Victim was killed & 100 & 57.1 & 100.0 \\ 
+\hline
+witness & No clear witness(es)               & 63 & 36.0 & 36.0 \\ 
+   & Clear witness(es) & 112 & 64.0 & 100.0 \\ 
+\hline
+physical\_evidence & No clear physical evidence & 80 & 45.7 & 45.7 \\ 
+   & Physical evidence & 95 & 54.3 & 100.0 \\ 
+\hline
+defendant\_property & Not clearly on property of the defendant & 117 & 66.9 & 66.9 \\ 
+   & On property of the defendant & 58 & 33.1 & 100.0 \\ 
+\hline
+type & Non-domestic                                                                      & 144 & 82.3 & 82.3 \\ 
+   & Domestic & 31 & 17.7 & 100.0 \\ 
+\hline
+victim\_race & Non-white victim & 69 & 39.4 & 39.4 \\ 
+   & White victim & 106 & 60.6 & 100.0 \\ 
+\hline
+victim\_gender & Female victim & 9 & 5.1 & 5.1 \\ 
+   & Male victim & 166 & 94.9 & 100.0 \\ 
+\hline
+accused\_race & Non-white defendant & 65 & 37.1 & 37.1 \\ 
+   & White defendant & 110 & 62.9 & 100.0 \\ 
+\hline
+accused\_gender & Female defendant & 20 & 11.4 & 11.4 \\ 
+   & Male defendant & 155 & 88.6 & 100.0 \\ 
+   \hline
+  \multicolumn{5}{l}{Note: For brevity, the variable \emph{County} is omitted.} \\ \hline
+\label{Summary statistics for categorical variables}
+\end{longtable}
+}
+  
+\doublespacing
 
 Many variables included different categories to indicate uncertainty,
 such as ``disputed'', ``unknown'', or ``unclear.'' In these cases, I
@@ -498,7 +559,7 @@ average, given different racial and gender identities for defendants and
 victims. To make the findings more substantively interpretable in light
 of publicly well-known cases, I consider two counterfactual questions.
 First, how would George Zimmerman's probability of conviction change had
-Trayvon Martin been white but all the other other objective factors of
+Trayvon Martin been white but all the other objective factors of
 the case had been the same as they were? Second, with respect to Marissa
 Alexendar's currently on-going appeal against her previous conviction,
 how would her probability of conviction change had she been a male
