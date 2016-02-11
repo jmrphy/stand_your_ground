@@ -555,8 +555,38 @@ tableNominal(mastervars[,!sapply(mastervars, is.numeric)],
                 add.to.row = list(list(42),  
              "\\hline  \\multicolumn{5}{l}{\\textbf{Note: }
              The variable county was omitted.} \\\\"))
+```
 
+A victim could die from a defendant with a gun, even in cases where the defendant does not intend to kill. A victim is less likely to die from other types of weapons (e.g., a knife) if the defendant is not purposefully intending to kill. Therfore, the effect of victim death on conviction could be conditional on whether the defendant used a gun rather than some other weapon if death by a weapon other than gun indicates a more purposeful and flagrant form of violence. To consider this, I estimate a model similar to Model 1 but with an interaction between *Defendant Gun* and *Deaths*. The model reveals no evidence of an interaction between *Defendant Gun* and *Deaths*. The coefficient for the interaction term is -.66 but statistically indistinguishable from zero (p=.63). Inclusion of the interaction term does not change the interpretation of the race-related coefficients highlighted in the article. 
 
+```{r, echo=FALSE, results='asis', message=FALSE, error=FALSE, warning=FALSE}
+
+model.weapon<-zelig(conviction ~ victim_initiated + victim_crime + victim_unarmed + defendant_pursued +
+                            could_retreat + accused_weapon + deaths + witness +
+                            physical_evidence + defendant_property + type + victim_race +
+                            victim_gender + victim_age + accused_race + accused_gender +
+                            accused_age + county + year + accused_weapon:deaths,
+      data=df,
+      model="logit",
+      cite=FALSE,
+      robust=TRUE)
+
+stargazer(model.weapon, header=FALSE, font.size="scriptsize",
+          title="Logistic Regression for Dependent Variable Conviction",
+          dep.var.labels.include=FALSE,
+          style="ajps",
+          keep=c("victim_initiated", "victim_crime", "victim_unarmed", "defendant_pursued", "could_retreat",
+                        "accused_weapon", "deaths", "witness",
+                        "physical_evidence", "defendant_property", "type", "victim_race", "victim_gender",
+                        "victim_age", "accused_race", "accused_gender", "accused_age", "accused_weapon:deaths"),
+          covariate.labels=c("Victim Initiated", "Victim Crime", "Victim Unarmed", "Defendant Pursued",
+                             "Defendant Could Retreat", "Defendant Gun", "Deaths", "Witness", "Physical Evidence",
+                             "Defendant's Property", "Domestic", "Victim White", "Victim Male", "Victim Age", "Defendant White",
+                             "Defendant Male", "Defendant Age", "Defendant Gun X Deaths"),
+          digits=2,
+          column.sep.width=c("0pt"),
+          notes=c("County and Year variables included in the models but not displayed. Robust (Huber-White) standard errors in parentheses.")
+          )
 
 ```
 

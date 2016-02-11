@@ -127,4 +127,59 @@ accused\_gender & Female defendant & 26 & 11.0 & 11.0 \\
 \end{longtable}
 }
 
+\pagebreak
+
+\begin{table}[!htbp] \centering 
+  \caption{Logistic Regression for Dependent Variable Conviction} 
+  \label{} 
+\footnotesize 
+\begin{tabular}{@{\extracolsep{0pt}}lc} 
+\\[-1.8ex]\hline \\[-1.8ex] 
+\hline \\[-1.8ex] 
+ Victim Initiated & $-$3.20$^{***}$ \\ 
+  & (0.80) \\ 
+  Victim Crime & $-$0.46 \\ 
+  & (0.94) \\ 
+  Victim Unarmed & 0.82 \\ 
+  & (0.84) \\ 
+  Defendant Pursued & $-$0.33 \\ 
+  & (0.87) \\ 
+  Defendant Could Retreat & 1.70$^{*}$ \\ 
+  & (0.99) \\ 
+  Defendant Gun & $-$1.40 \\ 
+  & (1.10) \\ 
+  Deaths & 3.00$^{**}$ \\ 
+  & (1.40) \\ 
+  Witness & $-$0.27 \\ 
+  & (0.72) \\ 
+  Physical Evidence & $-$0.95 \\ 
+  & (0.74) \\ 
+  Defendant's Property & $-$0.04 \\ 
+  & (0.96) \\ 
+  Domestic & $-$1.70 \\ 
+  & (1.10) \\ 
+  Victim White & 2.00$^{*}$ \\ 
+  & (1.10) \\ 
+  Victim Male & $-$1.40 \\ 
+  & (1.20) \\ 
+  Victim Age & 0.02 \\ 
+  & (0.03) \\ 
+  Defendant White & $-$1.90$^{*}$ \\ 
+  & (1.00) \\ 
+  Defendant Male & 0.16 \\ 
+  & (1.10) \\ 
+  Defendant Age & 0.001 \\ 
+  & (0.03) \\ 
+  Defendant Gun X Deaths & $-$0.66 \\ 
+  & (1.40) \\ 
+ N & 175 \\ 
+Log Likelihood & $-$58.00 \\ 
+AIC & 209.00 \\ 
+\hline \\[-1.8ex] 
+\multicolumn{2}{l}{$^{***}$p $<$ .01; $^{**}$p $<$ .05; $^{*}$p $<$ .1} \\ 
+\multicolumn{2}{l}{County and Year variables included in the models but not displayed.} \\
+\multicolumn{2}{l}{Robust (Huber-White) standard errors in parentheses.} \\ 
+\end{tabular} 
+\end{table}
+
 \end{document}  

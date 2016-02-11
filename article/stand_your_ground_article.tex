@@ -267,7 +267,10 @@ retreat (Defendant Could Retreat)? Did the defendant pursue the victim
 the incident take place on the defendant's property (Defendant's
 Property)? Was the victim killed (Deaths)? How old was the victim and
 defendant (Victim Age, Defendant Age)? Was there physical evidence
-(Physical Evidence)? Was there at least one witness (Witness)? Was the
+(Physical Evidence)?\footnote{What constitutes physical evidence? While the \emph{Tampa Bay Times} indicates for each case whether there was physical evidence, I was unable to find any further documentation of how this was defined. However, their short case descriptions shed light on what is meant by physical evidence. For an exemplary case in which the \emph{Times} reports the presence of physical evidence, consider the case of defendant Michael McAdams. In 2009, McAdams "fatally shot his estranged wife and her lover after he found them together at the former family home," according to the \emph{Tampa Bay Times}. "McAdams claimed self defense saying Andrews wanted to fight and his wife was hitting him when he fired. Forensic evidence ran counter to the details McAdams provided however and a jury found him guilty." Another example is the case of defendant Johnny Davis. According to the \emph{Times}, in 2010, "Johnny Davis stabbed Robert Davis, an unrelated neighbor, when Robert and others intervened in an argument he was having with his mother. Johnny Davis claimed self-defense saying Robert came into his mobile home and hit him in the head with a broom handle. But police found blood and other evidence to dispute that version of events."} Was there at least one witness (Witness)?\footnote{Presence of a witness
+could plausibly increase or decrease the probability of conviction, depending on whether witness testimonies
+are systematically patterned in a way that shapes the probability of conviction. Of course it is possible witness testimonies
+in favor of defendants cancel out testimonies against defendants. The variable is included as a control variable to investigate the matter empirically.} Was the
 victim committing a crime (Victim Crime)? Were the victim and defendant
 white or non-white (Victim Race, Defendant Race)?\footnote{The decision
   to consider Black and Hispanic people together is imperfect and
@@ -409,12 +412,12 @@ certain primary variables. Each coefficient reflects the average change
 in log-odds of conviction associated with each corresponding independent
 variable. Specifically, each coefficient reflects the expected change in
 log-odds of conviction associated with the independent variable taking
-the value indicated by the variable's name, relative to the absence or
-opposite of that value. Standard errors in parentheses reflect the
+the value indicated by the variable's name, relative to the baseline category which is opposite
+the value indicated by the variable's name. Standard errors in parentheses reflect the
 statistical uncertainty of the coefficients. Starred coefficients are
 those which are very unlikely to be observed merely by chance, according
-to conventional cutoffs. For instance, the coefficient for \emph{Victim
-Initiated} in Model 1 suggests that, on average, a situation which the
+to the conventional cutoff for statistical significance (p<.05). For instance, the coefficient for \emph{Victim
+Initiated} in Model 1 suggests that, on average, a situation that the
 victim initiates has a log-odds of conviction 3.2 less than if the
 victim did not clearly initiate, assuming all the other independent
 variables are equal to their modal values. Because log-odds are not
@@ -425,16 +428,12 @@ discussion of effect sizes for the following subsection.
 
 First, a series of objective factors related to the incident appear to
 have clear and intuitively sensible effects on the likelihood of
-conviction. Victim initiation appears to have a relatively large and
-highly significant negative effect on the likelihood of conviction,
+conviction. Victim initiation has a statistically significant negative effect on the likelihood of conviction and is
 robust across all three models. On the other hand, also intuitively
-sensisble, a clear ability for the defendant to retreat is associated
-with a significantly greater likelihood of conviction in all three
-models. Similarly, death of the victim appears, as we might expect, to
-significantly and robustly increase the probability of conviction.
-Perhaps surprisingly, however, defendants armed with a gun are
-significantly less likely to meet conviction. This is especially
-interesting given that conservative critics sometimes suggest that
+sensible, a clear ability for the defendant to retreat is associated
+with a greater likelihood of conviction in all three
+models. Death of the victim has a statistically significant and positive association with conviction.
+Defendants armed with a gun are less likely to be convicted, to a statistically significant degree. This latter finding is interesting given that conservative critics sometimes suggest that
 racial disparities in outcomes are spurious evidence of racism because
 people of color may be more likely to use guns in violent crimes (Lott
 2013), the assumption being that guns rather than colored skin tend
@@ -449,33 +448,31 @@ Several independent variables appear to have no relationship with the
 likelihood of conviction. It is interesting that, given SYG laws are
 often associated with the defense of homes, incidents taking place on
 the defendant's property do not appear any less likely to end in
-conviction. Witnesses and physical evidence also have no clear effect on
+conviction. Witnesses and physical evidence also have no statistically distinguishable effects on
 the probability of conviction.
 
 What do the models say about the key variables of interest, race and
-gender? In the baseline Model 1, white defendants appear to face a
-significantly lower likelihood of conviction (compared to black
+gender? In the baseline Model 1, white defendants appear to face a lower likelihood of conviction (compared to black
 defendants) and white victims appear to increase the likelihood of
-conviction (compared to black victims), even after controlling for all
+conviction (compared to black victims), at statistically significant levels, even after controlling for all
 of the objective factors considered already. However, if one considers
 how the race of both defendants and victims interact (Model 2), the race
-of the defendant per se does not appear to have any independent effect
+of the defendant per se does not appear to have any statistically distinguishable effect
 on the probability of conviction. However, crucially, Model 2 suggests
-that the extra likelihood of conviction in cases of white victims is
-significantly greater for defendants of color compared to white
-defendants.\footnote{The statistically significant coefficient of 9.90
+that the extra likelihood of conviction in cases of white victims is greater for defendants of color compared to white
+defendants, also at a statistically significant level.\footnote{The statistically significant coefficient of 9.90
   for \emph{Victim White} reflects the expected change in log odds of
   conviction for when the victim is white compared to when the victim is
   a person of color, \emph{while} the defendant is a person of color.
-  The negative and significant coefficient for \emph{White Victim X
+  The negative and statistically significant coefficient for \emph{White Victim X
   White Defendant} suggests that the coefficient of 9.9 associated with
   a white victim decreases by an average of 4.2 for white defendants.
   See below for more conveniently interpretable effect sizes.} Model 2
 also suggests that the extra likelihood of conviction in cases of white
-victims is significantly greater for female relative to male
-victims.\footnote{The negative and significant coefficient for
-  \emph{White Victim X Male Victim} suggests that the coefficient of 9.9
-  associated with a white victim decreases by an average of 6.0 for male
+victims is greater for female relative to male
+victims, at a statistically significant level.\footnote{The negative and statistically significant coefficient for
+  \emph{White Victim X Male Victim} suggests that the coefficient of 9.9, 
+  associated with a white victim, decreases by an average of 6.0 for male
   victims relative to female victims.}
 
 The coefficients for \emph{Domestic} in Models 1 and 2 suggest that in
@@ -487,12 +484,12 @@ introduces the interaction terms \emph{Domestic X Male Defendant} and
 incident depends on the gender of the victim or defendant. The
 statistically significant and negative coefficient for \emph{Domestic X
 Male Defendant} suggests that the tendency of defendants to escape
-conviction in domestic cases is significantly greater for male
+conviction in domestic cases is greater for male
 defendants compared to female defendants. Furthermore, as evidenced by
 the coefficient for \emph{Domestic} in Model 3, the effect of
 domesticity on conviction is statistically indistinguishable from zero
 when the defendant is female. The gender of the victim, however, has no
-discernable conditioning effect on the relationship between domesticity
+statistically discernable conditioning effect on the relationship between domesticity
 and conviction.
 
 Before assessing the size of these estimated effects, it should be noted
@@ -526,16 +523,15 @@ which further refine the general findings presented here.
 \begin{center}[Insert Figure 1 about here.]\end{center}
 
 Figure 1 illustrates the key estimate of interest from Model 2 in terms
-of probability. As the graph reveals, the probability of conviction is
-rather high in general when all the variables in Model 2 are assumed to
-be at their modal values, but the probability of conviction for
-non-white defendants against white victims \emph{approaches 1} and shows
-a strikingly smaller margin of error at a 95\% confidence level. In
+of probability. As the graph reveals, the probability of conviction for
+non-white defendants against white victims is higher, and shows
+a strikingly smaller margin of error at a 95\% confidence level, than 
+for white defendants in otherwise equivalent cases. In
 other words, white defendants against white victims have, on average,
 about a 90\% chance of conviction, but nonetheless there is a
-significant class of such defendants who are more likely to escape
-conviction; whereas, for non-white defendants in otherwise equivalent
-cases, there are no cases which are more likely to escape conviction. As
+non-trivial subset of such defendants who are more likely to escape
+conviction than to be convicted; whereas, for non-white defendants in otherwise equivalent
+cases, there are no cases which are more likely to escape conviction than be to be convicted. As
 Model 2 reveals, this difference is substantial enough that there is
 less than a 5\% probability we would observe this difference due to
 random chance alone.
@@ -544,7 +540,7 @@ random chance alone.
 
 Figure 2 illustrates the key estimate of interest from Model 3 in terms
 of probability. As the graph indicates, male defendants in domestic
-cases are significantly less likely to be convicted than female
+cases are less likely to be convicted than female
 defendants in otherwise equivalent domestic cases. With respect to
 domestic cases, the gender bias is even more pronounced than the racial
 bias indicated in Figure 2. In otherwise comparable cases, the
