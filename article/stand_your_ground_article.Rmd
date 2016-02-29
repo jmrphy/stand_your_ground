@@ -80,15 +80,17 @@ summaryvars$deaths<-as.factor(summaryvars$deaths)
 levels(summaryvars$deaths)<-c("Victim was not killed", "Victim was killed")
 
 tableContinuous(summaryvars[,sapply(summaryvars, is.numeric)],
-                stats = c("n", "min", "median", "mean", "max", "s", "na"),
-                cap="Summary statistics for numerical variables",
-                lab="Summary statistics for numerical variables")
+                stats = c("n", "min", "median", "mean", "max", "s"),
+                cap="Summary Statistics for Numerical Variables",
+                lab="Summary Statistics for Numerical Variables",
+                nams=c("Victim Age", "Defendant Age", "Year"))
 
 tableNominal(summaryvars[,!sapply(summaryvars, is.numeric)],
-             stats = c("n", "min", "median", "mean", "max", "s", "na"),
-                cap="Summary statistics for categorical variables",
-                lab="Summary statistics for categorical variables",
+             stats = c("n", "min", "median", "mean", "max", "s"),
+                cap="Summary Statistics for Categorical Variables",
+                lab="Summary Statistics for Categorical Variables",
                 caption.placement = "top",
+                cumsum=F,
                 add.to.row = list(list(42),  
              "\\hline  \\multicolumn{5}{l}{\\textbf{Note: }
              The variable county was omitted.} \\\\"))
@@ -562,10 +564,10 @@ A victim could die from a defendant with a gun, even in cases where the defendan
 ```{r, echo=FALSE, results='asis', message=FALSE, error=FALSE, warning=FALSE}
 
 model.weapon<-zelig(conviction ~ victim_initiated + victim_crime + victim_unarmed + defendant_pursued +
-                            could_retreat + accused_weapon + deaths + witness +
+                            could_retreat + witness +deaths + accused_weapon +
                             physical_evidence + defendant_property + type + victim_race +
                             victim_gender + victim_age + accused_race + accused_gender +
-                            accused_age + county + year + accused_weapon:deaths,
+                            accused_age + county + year + deaths:accused_weapon,
       data=df,
       model="logit",
       cite=FALSE,
@@ -580,9 +582,9 @@ stargazer(model.weapon, header=FALSE, font.size="scriptsize",
                         "physical_evidence", "defendant_property", "type", "victim_race", "victim_gender",
                         "victim_age", "accused_race", "accused_gender", "accused_age", "accused_weapon:deaths"),
           covariate.labels=c("Victim Initiated", "Victim Crime", "Victim Unarmed", "Defendant Pursued",
-                             "Defendant Could Retreat", "Defendant Gun", "Deaths", "Witness", "Physical Evidence",
+                             "Defendant Could Retreat", "Witness", "Deaths", "Defendant Gun", "Physical Evidence",
                              "Defendant's Property", "Domestic", "Victim White", "Victim Male", "Victim Age", "Defendant White",
-                             "Defendant Male", "Defendant Age", "Defendant Gun X Deaths"),
+                             "Defendant Male", "Defendant Age", "Deaths X Defendant Gun"),
           digits=2,
           column.sep.width=c("0pt"),
           notes=c("County and Year variables included in the models but not displayed. Robust (Huber-White) standard errors in parentheses.")

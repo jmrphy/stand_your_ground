@@ -7,10 +7,11 @@
 								% TeX will automatically convert eps --> pdf in pdflatex		
 \usepackage{amssymb}
 \usepackage{longtable}
+\usepackage{setspace}
 
-\title{Supplementary Information}
-\author{The Author}
-%\date{}							% Activate to display a given date or no date
+\title{Supplementary Information for ``Are `Stand Your Ground' Laws Racist and Sexist? A Statistical Analysis of Cases in Florida, 2005-2013"}
+\author{}
+\date{}							% Activate to display a given date or no date
 
 \begin{document}
 \maketitle
@@ -19,118 +20,122 @@
 
 {\footnotesize
 \begin{longtable}{lrrrrrrr}
-\caption{Summary statistics for numerical variables} \\
+\caption{Summary Statistics for Numerical Variables (All 237 Cases)} \\
  \textbf{Variable} & $\mathbf{n}$ & \textbf{Min} & $\mathbf{\widetilde{x}}$ & $\mathbf{\bar{x}}$ & \textbf{Max} & $\mathbf{s}$ & \textbf{\#NA} \\ 
   \hline
-deaths & 236 &    0 &    1 &    0.6 &    2 &  0.6 &  1 \\ 
-  victim\_age & 222 &    9 &   30 &   32.5 &   79 & 13.4 & 15 \\ 
-  accused\_age & 237 &   14 &   33 &   36.0 &   81 & 14.4 &  0 \\ 
-  year & 237 & 2005 & 2009 & 2009.2 & 2013 &  1.9 &  0 \\ 
+Deaths & 236 &    0 &    1 &    0.6 &    2 &  0.6 &  1 \\ 
+  Victim Age & 222 &    9 &   30 &   32.5 &   79 & 13.4 & 15 \\ 
+  Defendant Age & 237 &   14 &   33 &   36.0 &   81 & 14.4 &  0 \\ 
+   Year & 237 & 2005 & 2009 & 2009.2 & 2013 &  1.9 &  0 \\ 
   \hline
-\label{Summary statistics for numerical variables}
+\label{Summary Statistics for Numerical Variables}
 \end{longtable}
 }
 
+\pagebreak
 
 {\footnotesize
 \begin{longtable}{ll|rrr}
-\caption{Summary statistics for categorical variables} \\ 
+\caption{Summary Statistics for Categorical Variables (All 237 Cases)} \\ 
  \textbf{Variable} & \textbf{Levels} & $\mathbf{n}$ & $\mathbf{\%}$ & $\mathbf{\sum \%}$ \\ 
   \hline
-victim\_initiated & Victim did not clearly initiate & 133 & 56.1 & 56.1 \\ 
+Victim Initiated & Victim did not clearly initiate & 133 & 56.1 & 56.1 \\ 
    & Victim initiated & 104 & 43.9 & 100.0 \\ 
    \hline
  & all & 237 & 100.0 &  \\ 
    \hline
 \hline
-victim\_crime & Victim was not clearly committing a crime & 190 & 80.2 & 80.2 \\ 
+Victim Crime  & Victim was not clearly committing a crime & 190 & 80.2 & 80.2 \\ 
    & Victim was committing a crime & 47 & 19.8 & 100.0 \\ 
    \hline
  & all & 237 & 100.0 &  \\ 
    \hline
 \hline
-victim\_unarmed & Victim not clearly unarmed & 76 & 32.1 & 32.1 \\ 
+Victim Unarmed & Victim not clearly unarmed & 76 & 32.1 & 32.1 \\ 
    & Victim clearly unarmed & 161 & 67.9 & 100.0 \\ 
    \hline
  & all & 237 & 100.0 &  \\ 
    \hline
 \hline
-defendant\_pursued & Defendant did not clearly pursue & 167 & 70.5 & 70.5 \\ 
+Defendant Pursued & Defendant did not clearly pursue & 167 & 70.5 & 70.5 \\ 
    & Defendant pursued & 70 & 29.5 & 100.0 \\ 
    \hline
  & all & 237 & 100.0 &  \\ 
    \hline
 \hline
-could\_retreat & Defendant could not clearly have retreated & 102 & 43.0 & 43.0 \\ 
+Defendant Could Retreat & Defendant could not clearly have retreated & 102 & 43.0 & 43.0 \\ 
    & Defendant could have retreated & 135 & 57.0 & 100.0 \\ 
    \hline
  & all & 237 & 100.0 &  \\ 
    \hline
 \hline
-accused\_weapon & Defendant did not clearly have a gun & 87 & 36.7 & 36.7 \\ 
+Defendant Gun & Defendant did not clearly have a gun & 87 & 36.7 & 36.7 \\ 
    & Defendant clearly had a gun & 150 & 63.3 & 100.0 \\ 
    \hline
  & all & 237 & 100.0 &  \\ 
    \hline
 \hline
-witness & No clear witness(es) & 83 & 35.0 & 35.0 \\ 
+Witness & No clear witness(es) & 83 & 35.0 & 35.0 \\ 
    & Clear witness(es) & 154 & 65.0 & 100.0 \\ 
    \hline
  & all & 237 & 100.0 &  \\ 
    \hline
 \hline
-physical\_evidence & No clear physical evidence & 117 & 49.4 & 49.4 \\ 
+Physical Evidence & No clear physical evidence & 117 & 49.4 & 49.4 \\ 
    & Physical evidence & 120 & 50.6 & 100.0 \\ 
    \hline
  & all & 237 & 100.0 &  \\ 
    \hline
 \hline
-defendant\_property & Not clearly on property of the defendant & 164 & 69.2 & 69.2 \\ 
+Defendant's Property & Not clearly on property of the defendant & 164 & 69.2 & 69.2 \\ 
    & On property of the defendant & 73 & 30.8 & 100.0 \\ 
    \hline
  & all & 237 & 100.0 &  \\ 
    \hline
 \hline
-type & Non-domestic & 198 & 83.9 & 83.9 \\ 
+Domestic  & Non-domestic & 198 & 83.9 & 83.9 \\ 
    & Domestic & 38 & 16.1 & 100.0 \\ 
    \hline
  & all & 236 & 100.0 &  \\ 
    \hline
 \hline
-victim\_race & Non-white victim & 92 & 40.5 & 40.5 \\ 
+Victim Race & Non-white victim & 92 & 40.5 & 40.5 \\ 
    & White victim & 135 & 59.5 & 100.0 \\ 
    \hline
  & all & 227 & 100.0 &  \\ 
    \hline
 \hline
-victim\_gender & Female victim & 14 & 6.1 & 6.1 \\ 
+Victim Gender& Female victim & 14 & 6.1 & 6.1 \\ 
    & Male victim & 215 & 93.9 & 100.0 \\ 
    \hline
  & all & 229 & 100.0 &  \\ 
    \hline
 \hline
-accused\_race & Non-white defendant & 92 & 39.0 & 39.0 \\ 
+Defendant Race & Non-white defendant & 92 & 39.0 & 39.0 \\ 
    & White defendant & 144 & 61.0 & 100.0 \\ 
    \hline
  & all & 236 & 100.0 &  \\ 
    \hline
 \hline
-accused\_gender & Female defendant & 26 & 11.0 & 11.0 \\ 
+Defendant Gender & Female defendant & 26 & 11.0 & 11.0 \\ 
    & Male defendant & 211 & 89.0 & 100.0 \\ 
    \hline
- & all & 237 & 100.0 &  \\ 
-   \hline  \multicolumn{5}{l}{\textbf{Note: }
-             The variable county was omitted.} \\ \hline
-\hline
-\hline
+ & all & 237 & 100.0 &  \\
+    \hline
 \label{Summary statistics for categorical variables}
 \end{longtable}
 }
 
 \pagebreak
 
+\doublespacing
+
+If deaths from a gun are more likely to be accidental than deaths from other types of weapons, defendants who cause death by other types of weapons might be more frequently judged guilty than defendants who cause death by a gun, as they may be more likely to have (or be perceived to have) purposeful, criminal intent. If this were the case, we might expect the effect of deaths on conviction to be conditioned by the type of weapon used by the defendant. Table 3 shows results from a regression model estimated to test this possibility. The interaction term \emph{Deaths X Defendant Gun} is not statistically significant, which suggests there is little evidence that the defendant's type of weapon conditions the relationship between death of the victim and conviction of the defendant.
+
+\singlespacing
+
 \begin{table}[!htbp] \centering 
-  \caption{Logistic Regression for Dependent Variable Conviction} 
+  \caption{Logistic Regression for Dependent Variable \emph{Conviction}} 
   \label{} 
 \footnotesize 
 \begin{tabular}{@{\extracolsep{0pt}}lc} 
@@ -146,12 +151,12 @@ accused\_gender & Female defendant & 26 & 11.0 & 11.0 \\
   & (0.87) \\ 
   Defendant Could Retreat & 1.70$^{*}$ \\ 
   & (0.99) \\ 
-  Defendant Gun & $-$1.40 \\ 
-  & (1.10) \\ 
-  Deaths & 3.00$^{**}$ \\ 
-  & (1.40) \\ 
   Witness & $-$0.27 \\ 
   & (0.72) \\ 
+  Deaths & 3.00$^{**}$ \\ 
+  & (1.40) \\ 
+  Defendant Gun & $-$1.40 \\ 
+  & (1.10) \\ 
   Physical Evidence & $-$0.95 \\ 
   & (0.74) \\ 
   Defendant's Property & $-$0.04 \\ 
@@ -170,7 +175,7 @@ accused\_gender & Female defendant & 26 & 11.0 & 11.0 \\
   & (1.10) \\ 
   Defendant Age & 0.001 \\ 
   & (0.03) \\ 
-  Defendant Gun X Deaths & $-$0.66 \\ 
+  Deaths X Defendant Gun & $-$0.66 \\ 
   & (1.40) \\ 
  N & 175 \\ 
 Log Likelihood & $-$58.00 \\ 

@@ -51,7 +51,7 @@
 \hypersetup{breaklinks=true,
             bookmarks=true,
             pdfauthor={},
-            pdftitle={Are Stand Your Ground Laws Racist and Sexist? A Statistical Analysis of Cases in Florida, 2006-2013},
+            pdftitle={Are Stand Your Ground Laws Racist and Sexist? A Statistical Analysis of Cases in Florida, 2005-2013},
             colorlinks=true,
             citecolor=blue,
             urlcolor=blue,
@@ -67,7 +67,7 @@
 \usepackage{titling}
 \setlength{\droptitle}{-2em}
   \title{Are ``Stand Your Ground'' Laws Racist and Sexist? A Statistical Analysis
-of Cases in Florida, 2006-2013}
+of Cases in Florida, 2005-2013}
   \pretitle{\vspace{\droptitle}\centering\huge}
   \posttitle{\par}
   \author{}
@@ -86,7 +86,7 @@ of Cases in Florida, 2006-2013}
 
 
 \begin{abstract}
-Objective: I test for racial and gender bias in the enforcement of ``stand your ground" (SYG) laws, controlling for potential confounders often invoked to reject claims of racism and sexism. Method: Regressions, simulations, and genetic matching are conducted using case-level data from 237 incidents in the US state of Florida between 2006 and 2013. Results: Controlling for potential confounders, the probability of conviction for a white defendant against a white victim is an estimated 90\% with much error; for a black defendant it is nearly 100\% with little error. For a male defendant in a domestic case, the probability is 40\% whereas for a female defendant it is 80\%. Conclusions: Enforcement of SYG laws appears biased against people of color in general and women specifically in the home. Policy implications are especially stark because these findings contradict recent research conducted for the US Senate.\end{abstract}
+Objective: I test for racial and gender bias in the enforcement of ``stand your ground" (SYG) laws, controlling for potential confounders often invoked to reject claims of racism and sexism. Method: Regressions, simulations, and genetic matching are conducted using case-level data from 237 incidents in the US state of Florida between 2005 and 2013. Results: Controlling for potential confounders, the probability of conviction for a white defendant against a white victim is an estimated 90\% with much error; for a black defendant it is nearly 100\% with little error. For a male defendant in a domestic case, the probability is 40\% whereas for a female defendant it is 80\%. Conclusions: Enforcement of SYG laws appears biased against people of color in general and women specifically in the home. Policy implications are especially stark because these findings contradict recent research conducted for the US Senate.\end{abstract}
 \doublespacing
 
 ``Stand your ground'' (SYG) laws, which empower individuals to use any
@@ -107,10 +107,7 @@ This article presents the first systematic statistical analysis of
 racial and gender bias in the outcome of SYG cases to control for a wide
 variety of contextual factors. The data is gathered from the \emph{Tampa
 Bay Times} website, which reports information on 237 cases from the
-state of Florida in which an SYG defense was claimed.
-
-Two results from the analysis are notable. First, an SYG defense has
-\emph{nearly zero} probability of succeeding when the victim is white
+state of Florida in which an SYG defense was claimed. Two results from the analysis are notable. First, an SYG defense has \emph{nearly zero} probability of succeeding when the victim is white
 and the defendant is a person of color. This finding remains true after
 accounting for more than ten objective factors related to the crime,
 suggesting that the racial disparity is not due to any commonly
@@ -153,7 +150,7 @@ which assisted George Zimmerman toward his acquittal.\footnote{Marissa
 
 The \emph{Tampa Bay Times} has organized several key facts regarding all
 the cases they could find in which someone from the state of Florida has
-claimed an SYG defense since 2006 (``Florida's Stand Your Ground Law''
+claimed an SYG defense since 2005 (``Florida's Stand Your Ground Law''
 2013). The \emph{Tampa Bay Times} produced several analyses of their
 data, however, their analyses only look at descriptive cross-sections of
 the data. They explore the data revealingly, but because they do not
@@ -261,18 +258,18 @@ The final result is a data matrix of 175 observations. The data matrix
 contains indicators for all the following factors related to each case,
 as determined by the questions asked and answered by the \emph{Tampa Bay
 Times}, with the names I assigned each variable in parentheses. Did the
-victim initiate the incident (Victim Initiated)? Could the defendant
-retreat (Defendant Could Retreat)? Did the defendant pursue the victim
-(Defendant Pursued)? Did the defendant have a gun (Defendant Gun)? Did
-the incident take place on the defendant's property (Defendant's
-Property)? Was the victim killed (Deaths)? How old was the victim and
-defendant (Victim Age, Defendant Age)? Was there physical evidence
-(Physical Evidence)?\footnote{What constitutes physical evidence? While the \emph{Tampa Bay Times} indicates for each case whether there was physical evidence, I was unable to find any further documentation of how this was defined. However, their short case descriptions shed light on what is meant by physical evidence. For an exemplary case in which the \emph{Times} reports the presence of physical evidence, consider the case of defendant Michael McAdams. In 2009, McAdams "fatally shot his estranged wife and her lover after he found them together at the former family home," according to the \emph{Tampa Bay Times}. "McAdams claimed self defense saying Andrews wanted to fight and his wife was hitting him when he fired. Forensic evidence ran counter to the details McAdams provided however and a jury found him guilty." Another example is the case of defendant Johnny Davis. According to the \emph{Times}, in 2010, "Johnny Davis stabbed Robert Davis, an unrelated neighbor, when Robert and others intervened in an argument he was having with his mother. Johnny Davis claimed self-defense saying Robert came into his mobile home and hit him in the head with a broom handle. But police found blood and other evidence to dispute that version of events."} Was there at least one witness (Witness)?\footnote{Presence of a witness
+victim initiate the incident (\emph{Victim Initiated})? Could the defendant
+retreat (\emph{Defendant Could Retreat})? Did the defendant pursue the victim
+(\emph{Defendant Pursued})? Did the defendant have a gun (\emph{Defendant Gun})? Did
+the incident take place on the defendant's property (\emph{Defendant's
+Property})? Was the victim killed (\emph{Deaths})? How old was the victim and
+defendant (\emph{Victim Age, Defendant Age})? Was there physical evidence
+(\emph{Physical Evidence})?\footnote{What constitutes physical evidence? While the \emph{Tampa Bay Times} indicates for each case whether there was physical evidence, I was unable to find any further documentation of how this was defined. However, their short case descriptions shed light on what is meant by physical evidence. For an exemplary case in which the \emph{Times} reports the presence of physical evidence, consider the case of defendant Michael McAdams. In 2009, McAdams "fatally shot his estranged wife and her lover after he found them together at the former family home," according to the \emph{Tampa Bay Times}. "McAdams claimed self defense saying Andrews wanted to fight and his wife was hitting him when he fired. Forensic evidence ran counter to the details McAdams provided however and a jury found him guilty." Another example is the case of defendant Johnny Davis. According to the \emph{Times}, in 2010, "Johnny Davis stabbed Robert Davis, an unrelated neighbor, when Robert and others intervened in an argument he was having with his mother. Johnny Davis claimed self-defense saying Robert came into his mobile home and hit him in the head with a broom handle. But police found blood and other evidence to dispute that version of events."} Was there at least one witness (\emph{Witness})?\footnote{Presence of a witness
 could plausibly increase or decrease the probability of conviction, depending on whether witness testimonies
 are systematically patterned in a way that shapes the probability of conviction. Of course it is possible witness testimonies
 in favor of defendants cancel out testimonies against defendants. The variable is included as a control variable to investigate the matter empirically.} Was the
-victim committing a crime (Victim Crime)? Were the victim and defendant
-white or non-white (Victim Race, Defendant Race)?\footnote{The decision
+victim committing a crime (\emph{Victim Crime})? Were the victim and defendant
+white or non-white (\emph{Victim Race, Defendant Race})?\footnote{The decision
   to consider Black and Hispanic people together is imperfect and
   arguable, but seems to me justified by two concerns. First, this seems
   theoretically justified given that the concept of white supremacy
@@ -283,86 +280,19 @@ white or non-white (Victim Race, Defendant Race)?\footnote{The decision
   already complex analysis and saves limited degrees of freedom. Future
   research may explore whether disaggregating the race variables leads
   to different results.} Were the victim and defendant female or male
-(Victim Male, Defendant Male)?\footnote{Transgender identities were not
-  gauged.} Was the incident a domestic dispute (Domestic)? Which county
-did the incident occur in (County)? Is there a time trend (Year)?
+(\emph{Victim Male, Defendant Male})?\footnote{Transgender identities were not
+  gauged.} Was the incident a domestic dispute (\emph{Domestic})? Which county
+did the incident occur in (\emph{County})? Is there a time trend (\emph{Year})? Table 1 and Table 2 display summary statistics for the
+complete set of 175 cases used in the analysis.\footnote{For summary statistics of the raw data describing the full 237 cases, see Supplementary Information.}
+
+\begin{center}[Insert Table 1 about here]\end{center}
+
+\begin{center}[Insert Table 2 about here]\end{center}
 
 For the present analysis, conviction refers to any case in which the
 defendant received a guilty verdict or took a plea deal; non-convictions
 refer to any case in which the defendant was acquitted, dismissed,
 granted immunity, or not charged. The inclusion of plea deals with guilty verdicts is not ideal because those who take pleas are not necessarily guilty. I considered removing plea deals row-wise but, given that they are almost as frequent as guilty verdicts (33, and 40, respectively), it does not seem that the improvement of the measure would be so great as to outweigh the loss of information from row-wise deletion. Furthermore, including plea deals with guilty verdicts is theoretically sensible because pleas are likely driven by the expectation that the defendant would be found guilty if tried. Of course, racial identity might shape whether a defendant fears they will be found guilty (innocent or not), but if that is the case then that is precisely why it is best to keep that information in the category of conviction. Ultimately, although plea deals and guilty verdicts are different paths to conviction, they are equally well captured by the concept of conviction insofar as they are both outcomes in which the criminal justice system classifies the defendant as guilty.
-  
-\pagebreak
-
-\singlespacing
-
-{\footnotesize
-\begin{longtable}{lrrrrrrr}
-\caption{Summary statistics for numerical variables} \\
- \textbf{Variable} & $\mathbf{n}$ & \textbf{Min} & $\mathbf{\widetilde{x}}$ & $\mathbf{\bar{x}}$ & \textbf{Max} & $\mathbf{s}$ & \textbf{\#NA} \\ 
-  \hline
-  victim\_age & 175 &   15 &   30 &   32.1 &   79 & 12.8 & 0 \\ 
-  accused\_age & 175 &   14 &   35 &   37.1 &   81 & 14.6 & 0 \\ 
-  year & 175 & 2005 & 2009 & 2009.1 & 2013 &  2.0 & 0 \\ \hline
-\label{Summary statistics for numerical variables}
-\end{longtable}
-}
-{\footnotesize
-\begin{longtable}{ll|rrr}
-\caption{Summary statistics for categorical variables} \\ 
- \textbf{Variable} & \textbf{Levels} & $\mathbf{n}$ & $\mathbf{\%}$ & $\mathbf{\sum \%}$ \\ 
-  \hline
-victim\_initiated & Victim did not clearly initiate & 96 & 54.9 & 54.9 \\ 
-   & Victim initiated & 79 & 45.1 & 100.0 \\ 
-\hline
-victim\_crime & Victim was not clearly committing a crime & 137 & 78.3 & 78.3 \\ 
-   & Victim was committing a crime & 38 & 21.7 & 100.0 \\ 
-\hline
-victim\_unarmed & Victim not clearly unarmed & 50 & 28.6 & 28.6 \\ 
-   & Victim clearly unarmed & 125 & 71.4 & 100.0 \\ 
-\hline
-defendant\_pursued & Defendant did not clearly pursue & 126 & 72.0 & 72.0 \\ 
-   & Defendant pursued & 49 & 28.0 & 100.0 \\ 
-\hline
-could\_retreat & Defendant could not clearly have retreated & 72 & 41.1 & 41.1 \\ 
-   & Defendant could have retreated & 103 & 58.9 & 100.0 \\ 
-\hline
-accused\_weapon & Defendant did not clearly have a gun & 63 & 36.0 & 36.0 \\ 
-   & Defendant clearly had a gun & 112 & 64.0 & 100.0 \\ 
-\hline
-deaths & Victim was not killed & 75 & 42.9 & 42.9 \\ 
-   & Victim was killed & 100 & 57.1 & 100.0 \\ 
-\hline
-witness & No clear witness(es)               & 63 & 36.0 & 36.0 \\ 
-   & Clear witness(es) & 112 & 64.0 & 100.0 \\ 
-\hline
-physical\_evidence & No clear physical evidence & 80 & 45.7 & 45.7 \\ 
-   & Physical evidence & 95 & 54.3 & 100.0 \\ 
-\hline
-defendant\_property & Not clearly on property of the defendant & 117 & 66.9 & 66.9 \\ 
-   & On property of the defendant & 58 & 33.1 & 100.0 \\ 
-\hline
-type & Non-domestic                                                                      & 144 & 82.3 & 82.3 \\ 
-   & Domestic & 31 & 17.7 & 100.0 \\ 
-\hline
-victim\_race & Non-white victim & 69 & 39.4 & 39.4 \\ 
-   & White victim & 106 & 60.6 & 100.0 \\ 
-\hline
-victim\_gender & Female victim & 9 & 5.1 & 5.1 \\ 
-   & Male victim & 166 & 94.9 & 100.0 \\ 
-\hline
-accused\_race & Non-white defendant & 65 & 37.1 & 37.1 \\ 
-   & White defendant & 110 & 62.9 & 100.0 \\ 
-\hline
-accused\_gender & Female defendant & 20 & 11.4 & 11.4 \\ 
-   & Male defendant & 155 & 88.6 & 100.0 \\ 
-   \hline
-  \multicolumn{5}{l}{Note: For brevity, the variable \emph{County} is omitted.} \\ \hline
-\label{Summary statistics for categorical variables}
-\end{longtable}
-}
-  
-\doublespacing
 
 Many variables included different categories to indicate uncertainty,
 such as ``disputed'', ``unknown'', or ``unclear.'' In these cases, I
@@ -375,7 +305,7 @@ Times}, then it takes a value of ``No clear witness(es)'' and otherwise
 takes a value of ``Clear witness(es).'' Likewise, the variable
 \emph{Victim Crime} takes a value of ``Victim was committing a crime''
 in unambiguous cases but a value of ``Victim was not clearly committing
-a crime'' whenever the Times noted uncertainty.
+a crime'' whenever the \emph{Times} noted uncertainty.
 
 After scraping, cleaning, and merging the data from the \emph{Tampa Bay
 Times} website, I conducted a series of logistic regression analyses
@@ -387,11 +317,11 @@ dichotomous outcome.
 Following in the spirit of ``intersectional'' perspectives on race and
 gender in critical legal research (Crenshaw 1991; Crenshaw 1989), I also
 consider the four possible interactions among the race and gender of
-defendants and victims (White Victim X White Defendant, Male Victim X
-Male Defendant, White Victim X Male Victim, White Defendant X Male
-Defendant). I then consider whether domestic cases may have different
-effects for male and female defendants (Domestic X Male Defendant), or
-for male and female victims (Domestic X Male Victim).
+defendants and victims (\emph{White Victim X White Defendant}, \emph{Male Victim X
+Male Defendant}, \emph{White Victim X Male Victim}, \emph{White Defendant X Male
+Defendant}). I then consider whether domestic cases may have different
+effects for male and female defendants (\emph{Domestic X Male Defendant}), or
+for male and female victims (\emph{Domestic X Male Victim}).
 
 If previously perceived racial or gender bias is simply due to the fact
 that one racial group or gender commits more or worse crimes, or because
@@ -404,7 +334,7 @@ this should be associated with a lower likelihood of conviction).
 
 \subsection{Analysis}\label{analysis}
 
-Table 1 presents the results from three logistic regression analyses.
+Table 3 presents the results from three logistic regression analyses.
 Model 1 is a baseline model with all independent variables of interest
 included separately, whereas Models 2 and 3 introduce interaction terms
 to test whether race and gender condition the independent effects of
@@ -422,9 +352,7 @@ victim initiates has a log-odds of conviction 3.2 less than if the
 victim did not clearly initiate, assuming all the other independent
 variables are equal to their modal values. Because log-odds are not
 conveniently interpretable in terms of substantive effects, I postpone
-discussion of effect sizes for the following subsection.
-
-\begin{center}[Insert Table 1 about here.]\end{center}
+discussion of effect sizes until later in this section.
 
 First, a series of objective factors related to the incident appear to
 have clear and intuitively sensible effects on the likelihood of
@@ -433,7 +361,7 @@ robust across all three models. On the other hand, also intuitively
 sensible, a clear ability for the defendant to retreat is associated
 with a greater likelihood of conviction in all three
 models. Death of the victim has a statistically significant and positive association with conviction.
-Defendants armed with a gun are less likely to be convicted, to a statistically significant degree. This latter finding is interesting given that conservative critics sometimes suggest that
+Defendants armed with a gun are less likely to be convicted, again to a statistically significant degree. This latter finding is interesting given that conservative critics sometimes suggest that
 racial disparities in outcomes are spurious evidence of racism because
 people of color may be more likely to use guns in violent crimes (Lott
 2013), the assumption being that guns rather than colored skin tend
@@ -508,7 +436,7 @@ limited size of the present sample.\footnote{Specifically, following in
   Model 3, focusing on the domesticity-gender interaction for cases of
   white victims only and for cases of non-white victims only. With only
   68 cases of non-white victims, full models similar to those reported
-  in Table 1 lead to overfitting. Removing some independent variables
+  in Table 3 lead to overfitting. Removing some independent variables
   could avoid overfitting but is typically a bad strategy because it
   increases the risk of omitted variable bias and introduces
   arbitrariness. In the absence of expert, \emph{a priori} knowledge
@@ -518,7 +446,6 @@ limited size of the present sample.\footnote{Specifically, following in
 alternative modeling strategies may very well generate valuable insights
 which further refine the general findings presented here.
 
-\pagebreak
 
 \begin{center}[Insert Figure 1 about here.]\end{center}
 
@@ -707,13 +634,13 @@ that there is no racial bias in the outcome of SYG cases after
 controlling for other objective factors relevant to each case (Lott
 2013).
 
-This research note provides the first properly documented and
+This article provides the first properly documented and
 systematic, article-length statistical analysis of racial and gender
 bias in SYG cases which controls for a wide variety of objective factors
 possibly correlated with race and/or gender. In stark contrast to John
 Lott's analysis submitted in testimony to the US Senate Judiciary
 Committee, I find evidence of both racial and gender bias in a sample of
-Florida SYG cases from 2006-2013 reported by the \emph{Tampa Bay Times}
+Florida SYG cases from 2005-2013 reported by the \emph{Tampa Bay Times}
 (``Florida's Stand Your Ground Law'' 2013).
 
 In particular, the probability of conviction for a white defendant
@@ -751,16 +678,92 @@ alarmingly high probability that Marissa Alexander's initial conviction
 
 In summary, the analysis presented here provides striking evidence of
 both racial and gender bias in the outcomes of Florida cases between
-2006-2013 in which ``stand your ground'' laws are invoked. It reveals
+2005-2013 in which ``stand your ground'' laws are invoked. It reveals
 fundamental flaws in a previous analysis submitted in testimony to the
 US Senate Judiciary Committee (Lott 2013) and finds unreliable its
-conclusions of no racial bias. Finally, this research note informs
+conclusions of no racial bias. Finally, this article informs
 important public debate about the possibility of racism and sexism in
 the application of SYG laws, suggesting that lawmakers and judges have
 paid inadequate heed to the racial and gender implications of ``stand
 your ground'' laws.
 
 \pagebreak
+
+\singlespacing
+
+{\footnotesize
+\begin{longtable}{lrrrrrr}
+\caption{Summary Statistics for Numerical Variables} \\
+ \textbf{Variable} & $\mathbf{n}$ & \textbf{Min} & $\mathbf{\widetilde{x}}$ & $\mathbf{\bar{x}}$ & \textbf{Max} & $\mathbf{s}$ \\ 
+  \hline
+Victim Age & 175 &   15 &   30 &   32.1 &   79 & 12.8 \\ 
+  Defendant Age & 175 &   14 &   35 &   37.1 &   81 & 14.6 \\ 
+  Year & 175 & 2005 & 2009 & 2009.1 & 2013 &  2.0 \\ 
+  \hline
+\label{Summary Statistics for Numerical Variables}
+\end{longtable}
+}
+
+\pagebreak
+
+{\footnotesize
+\begin{longtable}{ll|rrr}
+\caption{Summary Statistics for Categorical Variables} \\ 
+ \textbf{Variable} & \textbf{Levels} & $\mathbf{n}$ & $\mathbf{\%}$ \\ 
+  \hline
+Victim Initiated & Victim did not clearly initiate & 96 & 54.9 \\ 
+   & Victim initiated & 79 & 45.1 \\ 
+\hline
+Victim Crime & Victim was not clearly committing a crime & 137 & 78.3 \\ 
+   & Victim was committing a crime & 38 & 21.7  \\ 
+\hline
+Victim Unarmed & Victim not clearly unarmed & 50 & 28.6 \\ 
+   & Victim clearly unarmed & 125 & 71.4 \\ 
+\hline
+Defendant Pursued & Defendant did not clearly pursue & 126 & 72.0 \\ 
+   & Defendant pursued & 49 & 28.0 \\ 
+\hline
+Defendant Could Retreat & Defendant could not clearly have retreated & 72 & 41.1 \\ 
+   & Defendant could have retreated & 103 & 58.9 \\ 
+\hline
+Defendant Gun & Defendant did not clearly have a gun & 63 & 36.0 \\ 
+   & Defendant clearly had a gun & 112 & 64.0 \\ 
+\hline
+Deaths & Victim was not killed & 75 & 42.9 \\ 
+   & Victim was killed & 100 & 57.1 \\ 
+\hline
+Witness & No clear witness(es)               & 63 & 36.0 \\ 
+   & Clear witness(es) & 112 & 64.0  \\ 
+\hline
+Physical Evidence & No clear physical evidence & 80 & 45.7 \\ 
+   & Physical evidence & 95 & 54.3 \\ 
+\hline
+Defendant's Property & Not clearly on property of the defendant & 117 & 66.9 \\ 
+   & On property of the defendant & 58 & 33.1 \\ 
+\hline
+Domestic & Non-domestic                             & 144 & 82.3 \\ 
+   & Domestic & 31 & 17.7 \\ 
+\hline
+Victim Race & Non-white victim & 69 & 39.4 \\ 
+   & White victim & 106 & 60.6 \\ 
+\hline
+Victim Gender & Female victim & 9 & 5.1\\ 
+   & Male victim & 166 & 94.9 \\ 
+\hline
+Defendant Race & Non-white defendant & 65 & 37.1 \\ 
+   & White defendant & 110 & 62.9 \\ 
+\hline
+Defendant Gender & Female defendant & 20 & 11.4 \\ 
+   & Male defendant & 155 & 88.6 \\ 
+   \hline
+  \multicolumn{5}{l}{Note: Due to space constraints, the variable \emph{County} is omitted.} \\
+\label{Summary Statistics for Categorical Variables}
+\end{longtable}
+}
+
+\pagebreak
+
+\doublespacing
 
 \begin{table}[!htbp] \centering 
   \caption{Logistic Regressions for Dependent Variable $Conviction$} 

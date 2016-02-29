@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  11 FEB 2016 18:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.10)  29 FEB 2016 18:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -912,37 +912,37 @@ LaTeX Info: Redefining \nameref on input line 83.
  [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 150.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 147.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 150.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 147.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 150
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 147
 .
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 150
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 147
 .
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 150.
+(Font)              <12> on input line 147.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 150.
+(Font)              <8> on input line 147.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 150.
-LaTeX Font Info:    Try loading font information for U+msa on input line 150.
+(Font)              <6> on input line 147.
+LaTeX Font Info:    Try loading font information for U+msa on input line 147.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -950,7 +950,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 150.
+LaTeX Font Info:    Try loading font information for U+msb on input line 147.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -959,84 +959,70 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 152.
+(Font)              <10> on input line 149.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 152.
+(Font)              <7> on input line 149.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 152.
+(Font)              <5> on input line 149.
  [2]
-[3] [4] [5] [6] [7]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 2 on input line 362.
-
-[8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19]
-Overfull \hbox (4.61195pt too wide) in paragraph at lines 769--826
+[3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18]
+[19]
+Overfull \hbox (4.61195pt too wide) in paragraph at lines 772--829
  [][] 
  []
 
 [20]
-<stand_your_ground_article_files/figure-latex/unnamed-chunk-7.pdf, id=135, 480.
+<stand_your_ground_article_files/figure-latex/unnamed-chunk-7.pdf, id=156, 480.
 79625pt x 317.185pt>
 File: stand_your_ground_article_files/figure-latex/unnamed-chunk-7.pdf Graphic 
 file (type pdf)
 
 <use stand_your_ground_article_files/figure-latex/unnamed-chunk-7.pdf>
 Package pdftex.def Info: stand_your_ground_article_files/figure-latex/unnamed-c
-hunk-7.pdf used on input line 832.
+hunk-7.pdf used on input line 835.
 (pdftex.def)             Requested size: 469.75502pt x 309.90506pt.
  [21 <./stand_your_ground_article_files/figure-latex/unnamed-chunk-7.pdf>]
-<stand_your_ground_article_files/figure-latex/unnamed-chunk-8.pdf, id=148, 480.
+<stand_your_ground_article_files/figure-latex/unnamed-chunk-8.pdf, id=170, 480.
 79625pt x 315.1775pt>
 File: stand_your_ground_article_files/figure-latex/unnamed-chunk-8.pdf Graphic 
 file (type pdf)
 
 <use stand_your_ground_article_files/figure-latex/unnamed-chunk-8.pdf>
 Package pdftex.def Info: stand_your_ground_article_files/figure-latex/unnamed-c
-hunk-8.pdf used on input line 842.
+hunk-8.pdf used on input line 845.
 (pdftex.def)             Requested size: 469.75502pt x 307.94366pt.
  [22 <./stand_your_ground_article_files/figure-latex/unnamed-chunk-8.pdf>]
-Underfull \hbox (badness 1552) in paragraph at lines 863--866
+Underfull \hbox (badness 1552) in paragraph at lines 866--869
 \T1/lmr/m/n/12 (+20) man.'' \T1/lmr/m/it/12 (+20) The At-lantic\T1/lmr/m/n/12 (
 +20) , July. [][]$http : / / www . theatlantic . com / national / archive / 201
 3 / 07 /
  []
 
 [23]
-
-Package longtable Warning: Table widths have changed. Rerun LaTeX.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 917.
-[24]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 917.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 920.
+ [24]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 920.
  (./stand_your_ground_article.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 917.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 917.
-
-
-Package rerunfilecheck Warning: File `stand_your_ground_article.out' has change
-d.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `stand_your_ground_article.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  44225D4C75536D788A4F9F50B350C166;724.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 917.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 920.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 920.
+Package rerunfilecheck Info: File `stand_your_ground_article.out' has not chang
+ed.
+(rerunfilecheck)             Checksum: 44225D4C75536D788A4F9F50B350C166;724.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 920.
  ) 
 Here is how much of TeX's memory you used:
- 12536 strings out of 493089
- 181579 string characters out of 6134842
- 291588 words of memory out of 5000000
- 15587 multiletter control sequences out of 15000+600000
- 97772 words of font info for 163 fonts, out of 8000000 for 9000
+ 12550 strings out of 493089
+ 181733 string characters out of 6134841
+ 292256 words of memory out of 5000000
+ 15594 multiletter control sequences out of 15000+600000
+ 98197 words of font info for 166 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 35i,16n,35p,1388b,341s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not ex
+ 35i,16n,35p,1402b,341s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not ex
 ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not exis
+t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exist
 , replaced by a fixed one
@@ -1083,10 +1069,10 @@ ocal/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive
 f-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2015/texmf-dist/fon
 ts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
 blic/lm/lmsy8.pfb>
-Output written on stand_your_ground_article.pdf (24 pages, 361126 bytes).
+Output written on stand_your_ground_article.pdf (24 pages, 361566 bytes).
 PDF statistics:
- 258 PDF objects out of 1000 (max. 8388607)
- 208 compressed objects within 3 object streams
- 46 named destinations out of 1000 (max. 500000)
- 25099 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 279 PDF objects out of 1000 (max. 8388607)
+ 229 compressed objects within 3 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 25147 words of extra memory for PDF output out of 29859 (max. 10000000)
 
